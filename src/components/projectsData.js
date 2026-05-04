@@ -1,10 +1,12 @@
 // Aggiungi "export" davanti alla costante
 import copScalo from "../assets/img/scalo/14_luglio_copertina.jpg"
 import copAmami from "../assets/img/amami/02.png"
+import videoScalo from "../assets/img/scalo/Reel 4 Collazione Salata.mov"
 import imgScalo1 from "../assets/img/scalo/11_luglio.png"
 import imgScalo2 from "../assets/img/scalo/26_giugno.png"
 import imgScalo3 from "../assets/img/scalo/03_ottobre.png"
 import imgScalo4 from "../assets/img/scalo/10_ottobre.png"
+import videoAmami from "../assets/img/amami/01_reel_AMAMI.mp4"
 import imgAmami1 from "../assets/img/amami/01.png"
 import imgAmami2 from "../assets/img/amami/02.png"
 import imgAmami3 from "../assets/img/amami/04 (1).png"
@@ -22,7 +24,7 @@ export const projectsData = [
         visualizzazioni: "+1.600.000 VISUALIZZAZIONI",
         time: "in un anno",
         image_cop: copScalo,
-        video: "/src/assets/img/scalo/Reel 4 Collazione Salata.mov",
+        video: videoScalo,
         gallery: [
             imgScalo1,
             imgScalo2,
@@ -39,7 +41,7 @@ export const projectsData = [
         interazioni: "+157.000 PERSONE RAGGIUNTE",
         time: "in una settimana",
         image_cop: copAmami,
-        video: "/src/assets/img/amami/01_reel_AMAMI.mp4",
+        video: videoAmami,
         gallery: [
             imgAmami1,
             imgAmami2,
