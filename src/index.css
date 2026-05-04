@@ -1,0 +1,215 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+.Aktiv-Grotesk-Thin {
+    font-family: "aktiv-grotesk-thin", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.Aktiv-Grotesk-ThinItalic {
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.Aktiv-Grotesk-Light {
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.Aktiv-Grotesk-LightItalic {
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.Aktiv-Grotesk-Regular {
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.Aktiv-Grotesk-RegularItalic {
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.Aktiv-Grotesk-Medium {
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.Aktiv-Grotesk-MediumItalic {
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.Aktiv-Grotesk-SemiBold {
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.Aktiv-Grotesk-SemiBoldItalic {
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.Aktiv-Grotesk-Bold {
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.Aktiv-Grotesk-BoldItalic {
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.Aktiv-Grotesk-XBold {
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.Aktiv-Grotesk-XBoldItalic {
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.Aktiv-Grotesk-Black {
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.Aktiv-Grotesk-BlackItalic {
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+
+body {
+    font-family: 'ClashGrotesk', sans-serif;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.hero-text {
+    font-size: 280px;
+}
+
+.right-hero-text {
+    right: -300px;
+}
+
+.top-hero-text {
+    top: 300px
+}
+
+.img-project-size {
+    width: 400px;
+    height: 600px;
+}
+
+.padding-project-section {
+    padding: 150px 0;
+}
+
+.fw-hero {
+    font-weight: 700;
+}
+
+.hero-text {
+    font-size: clamp(3rem, 10vw, 125px);
+    line-height: 0.8;
+}
+
+.hero-image-container {
+    width: 80%;
+    max-width: 600px;
+    height: 50vh;
+    z-index: 1;
+}
+
+/* REGOLE MOBILE (Default) */
+.hero-text {
+    font-size: 90px;
+    /* Più piccolo per stare in colonna su mobile */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+}
+
+/* Posizionamento verticale parole su Mobile */
+h1.hero-text:nth-of-type(1) {
+    top: 20%;
+}
+
+h1.hero-text:nth-of-type(2) {
+    top: calc(20% + 80px);
+}
+
+.img-size-project-desktop {
+    height: 700px;
+    width: 600px;
+}
+
+.position-right-text-project {
+    right: 200px;
+}
+
+.img-size-project-mobile {
+    height: 600px;
+    width: 450px;
+}
+
+/* REGOLE DESKTOP (Ripristino esatto del tuo layout) */
+@media (min-width: 992px) {
+    .hero-text {
+        font-size: 125px !important;
+        transform: none;
+        color: black;
+    }
+
+    /* Ripristino Think */
+    h1.hero-text:nth-of-type(1) {
+        left: 400px !important;
+        top: 150px !important;
+    }
+
+    /* Ripristino Create */
+    h1.hero-text:nth-of-type(2) {
+        right: 380px !important;
+        left: auto !important;
+        /* Reset del left: 50% */
+        bottom: 190px !important;
+        top: auto !important;
+        /* Reset del top mobile */
+    }
+
+    .img-size-project-desktop {
+        height: 750px;
+        width: 600px;
+    }
+
+    .padding-text-desktop {
+        padding-right: 150px;
+    }
+}
