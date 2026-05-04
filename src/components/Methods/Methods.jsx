@@ -1,3 +1,5 @@
+import imgMethods from "../../assets/img/gif2.gif"
+
 const Methods = () => {
 
     return (
@@ -16,7 +18,7 @@ const Methods = () => {
                         style={{ fontSize: "clamp(40px, 8vw, 70px)" }}>(</h1>
 
                     <img
-                        src="../src/assets/img/gif2.gif"
+                        src={imgMethods}
                         alt=""
                         className="img-fluid"
                         style={{ maxWidth: "600px", width: "100%" }}

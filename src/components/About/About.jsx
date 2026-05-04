@@ -1,3 +1,5 @@
+import aboutImg from "../../assets/img/dolcina.gif"
+
 const About = () => {
     return (
         <>
@@ -26,7 +28,7 @@ const About = () => {
                     </h1>
 
                     <div className="d-flex flex-column align-items-center justify-content-center gap-4">
-                        <img className="w-75" src="../src/assets/img/dolcina.gif" alt="" />
+                        <img className="w-75" src={aboutImg} alt="" />
 
                         <div className="d-flex flex-column w-100 Aktiv-Grotesk-Light"
                             style={{ fontSize: "clamp(16px, 4vw, 20px)" }}>
