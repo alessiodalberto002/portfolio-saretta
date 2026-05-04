@@ -19,7 +19,7 @@ const Navbar = ({ links }) => {
     };
 
     return (
-        <nav className="position-fixed w-100 p-3 bg-white" style={{ zIndex: 1000, top: 0 }}>
+        <nav className="position-fixed w-100 p-3" style={{ zIndex: 1000, top: 0 }}>
             <div className="d-flex justify-content-between align-items-center">
                 {/* Logo */}
                 <a href="/" className="text-uppercase Aktiv-Grotesk-Black" style={{ textDecoration: "none", color: "black", fontSize: "25px" }}>
@@ -30,7 +30,7 @@ const Navbar = ({ links }) => {
                 <ul className="d-none d-md-flex m-0 p-0" style={{ listStyle: "none" }}>
                     {links.map((item) => (
                         <li key={item.id} className="me-4 Aktiv-Grotesk-Regular">
-                            <a href={`/${item.linkName.toLowerCase()}`} className="text-dark fs-4" style={{ textDecoration: "none" }}>
+                            <a href={item.path} className="text-dark fs-4" style={{ textDecoration: "none" }}>
                                 {item.linkName}
                             </a>
                         </li>

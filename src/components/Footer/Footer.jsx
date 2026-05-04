@@ -2,7 +2,7 @@ const Footer = () => {
 
     return (
         <>
-            <div className="container p-3">
+            <div id="contact" className="container p-3">
                 {/* Su mobile in colonna e centrato, su desktop in riga con spazio tra gli elementi */}
                 <div className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 gap-md-0">
                     <p className="m-0 text-uppercase Aktiv-Grotesk-Black">sara molino</p>

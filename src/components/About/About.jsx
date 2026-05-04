@@ -2,7 +2,7 @@ const About = () => {
     return (
         <>
             {/* SEZIONE DESKTOP: visibile solo da tablet (md) in su */}
-            <div className="vh-100 d-none d-md-block">
+            <div id="about" className="vh-100 d-none d-md-block">
                 <div className="d-flex flex-column justify-content-center align-items-center h-100">
                     <h1 className="text-uppercase mb-5 text-center Aktiv-Grotesk-Black" style={{ fontSize: "50px" }}>about me</h1>
 
