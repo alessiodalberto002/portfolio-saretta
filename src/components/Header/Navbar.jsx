@@ -51,7 +51,7 @@ const Navbar = ({ links }) => {
                     {links.map((item) => (
                         <li key={item.id} className="mb-3 Aktiv-Grotesk-Regular">
                             <a
-                                href={`/${item.linkName.toLowerCase()}`}
+                                href={item.path}
                                 className="text-dark fs-4"
                                 onClick={() => setIsOpen(false)}
                                 style={{ textDecoration: "none", display: 'block' }}
