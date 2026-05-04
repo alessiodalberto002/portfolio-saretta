@@ -9,7 +9,7 @@ const About = () => {
                     <h1 className="text-uppercase mb-5 text-center Aktiv-Grotesk-Black" style={{ fontSize: "50px" }}>about me</h1>
 
                     <div className="d-flex align-items-center justify-content-center gap-5">
-                        <img className="w-25" src="../src/assets/img/dolcina.gif" alt="" />
+                        <img className="w-25" src={aboutImg} alt="" />
                         <div className="flex-column w-25 Aktiv-Grotesk-Light" style={{ fontSize: "20px" }}>
                             <p className="fw-light">Fuori da Photoshop sono un costante work in progress, ma davanti a un pc so esattamente cosa fare. Mi nutro di caffè, intuizioni notturne e libri, forse troppi.</p>
                             <p className="fw-light">Mi piacciono le sfide, mi piace raccontare, perdermi tra pensieri e colori e trovare soluzioni. Mi piacciono le tele bianche e i punti di partenza.</p>
