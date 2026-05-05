@@ -15,7 +15,7 @@ const ProjectDetail = () => {
                 flex-column-reverse: mette il testo (seconda colonna nel codice) sopra le immagini su mobile.
                 flex-md-row: riporta le immagini a sinistra e il testo a destra su desktop.
             */}
-            <div className="row d-flex flex-column-reverse flex-md-row p-3">
+            <div className="d-flex flex-column-reverse flex-md-row">
 
                 {/* COLONNA IMMAGINI */}
                 <div className="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center">
@@ -44,7 +44,7 @@ const ProjectDetail = () => {
                 </div>
 
                 {/* COLONNA TESTO */}
-                <div className="col-12 col-md-6 mb-5 mb-md-0 padding-text-desktop">
+                <div className="col-12 col-md-6 mb-5 mb-md-0 padding-text-desktop padding-text-mobile">
                     {/* 
                         sticky-md-top: attivo solo da desktop (md) in su.
                         Su mobile il div segue il flusso naturale in cima alla pagina.

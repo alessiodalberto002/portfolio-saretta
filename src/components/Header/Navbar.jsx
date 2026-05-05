@@ -48,7 +48,7 @@ const Navbar = ({ links }) => {
                 </ul>
 
                 {/* Hamburger Icon */}
-                <div className="d-md-none" onClick={toggleMenu} style={{ cursor: 'pointer', fontSize: '30px' }}>
+                <div className="d-md-none margin-bottom-mobile" onClick={toggleMenu} style={{ cursor: 'pointer', fontSize: '30px' }}>
                     <span style={{
                         display: 'block',
                         transform: isOpen ? 'rotate(90deg)' : 'none',

@@ -176,8 +176,20 @@ h1.hero-text:nth-of-type(2) {
 }
 
 .img-size-project-mobile {
-    height: 600px;
-    width: 450px;
+    height: 100%;
+    width: 100%;
+}
+
+.padding-mobile-project{
+    padding: 0 20px;
+}
+
+.padding-text-mobile {
+    padding: 0 30px;
+}
+
+.margin-bottom-mobile {
+    margin-bottom: 5px;
 }
 
 /* REGOLE DESKTOP (Ripristino esatto del tuo layout) */
