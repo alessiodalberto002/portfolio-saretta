@@ -12,6 +12,11 @@ import imgAmami2 from "../assets/img/amami/02.png"
 import imgAmami3 from "../assets/img/amami/04 (1).png"
 import imgAmami4 from "../assets/img/amami/05 (1).png"
 import imgAmami5 from "../assets/img/amami/06.png"
+import img7p1 from "../assets/img/7p/01.png"
+import img7p2 from "../assets/img/7p/02 (1).png"
+import img7p3 from "../assets/img/7p/03 (1).png"
+import img7p4 from "../assets/img/7p/05 (3).png"
+import img7p5 from "../assets/img/7p/06 (6).png"
 
 export const projectsData = [
     {
@@ -58,7 +63,18 @@ export const projectsData = [
     {
         id: 4,
         name: "sevenplast - digital",
-        image_cop: "/src/assets/img/scalo/14_luglio_copertina.jpg",
+        title: "make it plastic",
+        subtitle: "make it unique",
+        description: "Amami Teatro è un evento che da anni anima il Teatro Marrucino di Chieti per 8.640 minuti ininterrotti di spettacolo dal vivo. L'obiettivo era quello di catturare l'energia, il ritmo e l'atmosfera del festival: teaser, storie dal backstage, reel e trend del momento che trasformano ogni post in un'anteprima da vivere.Il risultato è un feed dinamico e riconoscibile, capace di connettere il publico con l'arte dal vivo, far parte dell'esperienza.",
+        interazioni: "+157.000 PERSONE RAGGIUNTE",
+        image_cop: img7p3,
+        gallery: [
+            img7p1,
+            img7p2,
+            img7p3,
+            img7p4,
+            img7p5,
+        ]
     },
     {
         id: 5,
