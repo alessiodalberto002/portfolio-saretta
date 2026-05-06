@@ -318,6 +318,6 @@ h1.hero-text:nth-of-type(2) {
 
     /* Velocizziamo leggermente su mobile perché il tragitto è più corto */
     .hero-slider-track {
-        animation-duration: 30s
+        animation-duration: 100s
     }
 }
