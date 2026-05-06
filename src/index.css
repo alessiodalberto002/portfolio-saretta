@@ -178,7 +178,7 @@ h1.hero-text:nth-of-type(2) {
     width: 100%;
 }
 
-.padding-mobile-project{
+.padding-mobile-project {
     padding: 0 20px;
 }
 
@@ -221,5 +221,103 @@ h1.hero-text:nth-of-type(2) {
 
     .padding-text-desktop {
         padding-right: 150px;
+    }
+
+}
+
+
+
+
+
+.hero-minimal {
+    height: 100vh;
+    background-color: #fcfcfc;
+    color: #121212;
+    /* Spazio tra testo e slider */
+}
+
+.hero-title {
+    font-size: clamp(3.5rem, 15vw, 12rem);
+    letter-spacing: -0.05em;
+    z-index: 10;
+}
+
+/* Container dello slider */
+.hero-slider-container {
+    position: relative;
+}
+
+/* La traccia che si muove */
+.hero-slider-track {
+    display: flex;
+    width: max-content;
+    /* Fondamentale per far stare le foto su una riga */
+    animation: marquee 120s linear infinite;
+}
+
+/* Rallenta al passaggio del mouse per permettere di guardare le foto */
+.hero-slider-track:hover {
+    animation-play-state: paused;
+}
+
+.hero-slide {
+    width: 400px;
+    /* Larghezza fissa per ogni immagine */
+    height: 550px;
+    /* Altezza fissa per coerenza */
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 2px;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(90%);
+    /* Leggera desaturazione per il look minimal */
+    transition: filter 0.4s ease;
+}
+
+.hero-slide:hover {
+    transform: scale(1.05);
+    z-index: 11;
+}
+
+.hero-slide:hover img {
+    filter: grayscale(0%);
+}
+
+/* ANIMAZIONE INFINITA */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        /* Si sposta esattamente della metà (perché abbiamo duplicato l'array) */
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .hero-minimal {
+        height: 100vh;
+        background-color: #fcfcfc;
+        color: #121212;
+        /* Spazio tra testo e slider */
+    }
+
+    .hero-slide {
+        width: 360px;
+        height: 480px;
+    }
+
+    /* Velocizziamo leggermente su mobile perché il tragitto è più corto */
+    .hero-slider-track {
+        animation-duration: 30s
     }
 }
