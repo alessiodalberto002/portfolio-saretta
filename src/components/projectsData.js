@@ -24,7 +24,7 @@ export const projectsData = [
         name: "scalo24 - digital",
         title: "Sharing is pop",
         subtitle: "Take me back to life",
-        description: "Non solo food ma condivisione e tanta genuinità. Parliamo alla Gen Z con un linguaggio vicino alla community tatto di ricordi, momenti e trasi iconiche. Ogni contenuto è studiato per fermare lo scroll e invogliare a interagire, trasformando ogni post in un piccolo momento da vivere e condividere. sato eun orono aconosciole vvare e invitante: non solo una vetrina digitale, ma un'esperienza che trasmette la personalità del locale e crea connessione con il bubblico.",
+        description: "Non solo food, ma condivisione, atmosfera e genuinità. Il progetto nasce con l’idea di trasformare il profilo del locale in uno spazio capace di parlare davvero alla Gen Z, attraverso un linguaggio semplice, diretto e vicino alla community. Un tone of voice spontaneo, leggero e autentico, pensato per far sentire il pubblico parte dell’esperienza ancora prima di entrare nel locale. Ogni contenuto diventa così un piccolo momento da vivere, condividere e ricordare: qualcosa in cui riconoscersi, fermarsi e interagire in modo naturale. Il risultato è un profilo riconoscibile, fresco e pieno di personalità, dove estetica e strategia convivono senza forzature. Non una semplice vetrina digitale, ma un racconto continuo capace di trasmettere l’energia del brand e creare una connessione reale con la community.",
         interazioni: "+70.000 INTERAZIONI",
         visualizzazioni: "+1.600.000 VISUALIZZAZIONI",
         time: "in un anno",
@@ -42,7 +42,7 @@ export const projectsData = [
         name: "amami teatro - event",
         title: "in scena e fuori scena",
         subtitle: "Molto più di un semplice festival",
-        description: "Amami Teatro è un evento che da anni anima il Teatro Marrucino di Chieti per 8.640 minuti ininterrotti di spettacolo dal vivo. L'obiettivo era quello di catturare l'energia, il ritmo e l'atmosfera del festival: teaser, storie dal backstage, reel e trend del momento che trasformano ogni post in un'anteprima da vivere.Il risultato è un feed dinamico e riconoscibile, capace di connettere il publico con l'arte dal vivo, far parte dell'esperienza.",
+        description: "Amami Teatro è molto più di un evento: è energia, movimento e spettacolo che prende vita per 8.640 minuti ininterrotti all’interno del Teatro Marrucino di Chieti. L’obiettivo del progetto era raccontare tutta l’intensità del festival attraverso una comunicazione capace di trasmetterne il ritmo, l’atmosfera e le emozioni sul palco e dietro le quinte. Teaser, backstage, reel e trend diventano strumenti per avvicinare il pubblico all’esperienza, rendendolo partecipe di tutto ciò che avviene all’interno del Teatro. Il tone of voice è dinamico, coinvolgente e contemporaneo, pensato per raccontare qualcosa di vicino, vivo e condivisibile anche sui social. Il risultato è un feed riconoscibile e in continua evoluzione, dove arte e comunicazione si incontrano in modo naturale in un racconto visivo capace di creare attesa, connessione e partecipazione attorno all’esperienza.",
         interazioni: "+157.000 PERSONE RAGGIUNTE",
         time: "in una settimana",
         image_cop: copAmami,
@@ -57,15 +57,10 @@ export const projectsData = [
     },
     {
         id: 3,
-        name: "il cerreto - digital",
-        image_cop: "/src/assets/img/home/06.png",
-    },
-    {
-        id: 4,
         name: "sevenplast - digital",
         title: "make it plastic",
         subtitle: "make it unique",
-        description: "Amami Teatro è un evento che da anni anima il Teatro Marrucino di Chieti per 8.640 minuti ininterrotti di spettacolo dal vivo. L'obiettivo era quello di catturare l'energia, il ritmo e l'atmosfera del festival: teaser, storie dal backstage, reel e trend del momento che trasformano ogni post in un'anteprima da vivere.Il risultato è un feed dinamico e riconoscibile, capace di connettere il publico con l'arte dal vivo, far parte dell'esperienza.",
+        description: "L’obiettivo del progetto era trasformare un prodotto spesso dato per scontato in qualcosa capace di distinguersi e raccontare valore. Da oltre 40 anni, Sevenplast opera nel settore degli imballaggi in polietilene per il mercato B2B, ma la sfida era andare oltre il prodotto stesso e costruire una comunicazione con un’identità forte e riconoscibile. Il concept creativo nasce dall’idea di trattare ogni dettaglio con la stessa cura riservata a un prodotto di alta moda. Texture, materiali, luci e composizioni diventano così parte di un racconto visivo più ricercato, dove anche l’imballaggio assume carattere, presenza ed estetica. La comunicazione punta su precisione, qualità e attenzione ai particolari, trasformando un settore tecnico in qualcosa di visivamente contemporaneo e interessante da osservare. Il risultato è un feed pulito, distintivo e coerente, capace non solo di valorizzare il prodotto, ma anche di trasmettere una storia fatta di esperienza, aﬃdabilità e scelte consapevoli.",
         interazioni: "+157.000 PERSONE RAGGIUNTE",
         image_cop: img7p3,
         gallery: [
@@ -77,12 +72,7 @@ export const projectsData = [
         ]
     },
     {
-        id: 5,
-        name: "voxel - digital",
-        image_cop: "/src/assets/img/amami/02.png",
-    },
-    {
-        id: 6,
+        id: 4,
         name: "scopriamoci - book",
         image_cop: "/src/assets/img/home/06.png",
     },

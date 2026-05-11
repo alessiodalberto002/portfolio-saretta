@@ -10,7 +10,7 @@ const ProjectList = () => {
                     <h1 className="text-center text-uppercase mb-4 Aktiv-Grotesk-Black" style={{ fontSize: "50px" }}>
                         work
                     </h1>
-                    <div className="row row-cols-1 row-cols-md-3 g-2">
+                    <div className="row row-cols-1 row-cols-md-2 g-2">
                         {projectsData.map((project) => (
                             <div key={project.id} className="col">
                                 <SingleProject

@@ -16,7 +16,7 @@ const Footer = () => {
 
                 {/* Testo finale centrato su mobile per estetica, mantenuto normale su desktop */}
                 <p className="Aktiv-Grotesk-Light text-center text-md-start mt-3 mt-md-2">
-                    i spy with my little eye something crazy come to me
+                    Twinkle twinkle little design, how I wonder what you'll shine! Up above the page so high, ideas sparkling in my eye.
                 </p>
             </div>
         </>

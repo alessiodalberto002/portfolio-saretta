@@ -1,9 +1,14 @@
+import React, { useState } from "react"; // <--- 1. Importa useState
 import { useParams } from "react-router-dom";
 import { projectsData } from "../components/projectsData.js";
+import { Button, Collapse } from 'react-bootstrap';
 
 const ProjectDetail = () => {
     const { id } = useParams();
     const project = projectsData.find((p) => p.id === Number(id));
+
+    // 2. Definisci lo stato "open" qui dentro
+    const [open, setOpen] = useState(false);
 
     if (!project) {
         return <div className="container py-5"><h1>Progetto non trovato</h1></div>;
@@ -11,10 +16,6 @@ const ProjectDetail = () => {
 
     return (
         <div className="py-5" style={{ marginTop: "80px" }}>
-            {/* 
-                flex-column-reverse: mette il testo (seconda colonna nel codice) sopra le immagini su mobile.
-                flex-md-row: riporta le immagini a sinistra e il testo a destra su desktop.
-            */}
             <div className="d-flex flex-column-reverse flex-md-row">
 
                 {/* COLONNA IMMAGINI */}
@@ -45,10 +46,6 @@ const ProjectDetail = () => {
 
                 {/* COLONNA TESTO */}
                 <div className="col-12 col-md-6 mb-5 mb-md-0 padding-text-desktop padding-text-mobile">
-                    {/* 
-                        sticky-md-top: attivo solo da desktop (md) in su.
-                        Su mobile il div segue il flusso naturale in cima alla pagina.
-                    */}
                     <div className="sticky-md-top" style={{ top: "120px", zIndex: 10 }}>
                         <h1 className="Aktiv-Grotesk-Black text-uppercase m-0 p-0 fs-1">
                             {project.title}
@@ -60,24 +57,54 @@ const ProjectDetail = () => {
                             {project.description}
                         </p>
 
-                        <div className="stats-container mt-4">
-                            {project.interazioni && (
-                                <p className="Aktiv-Grotesk-Black fs-3 mb-1">
-                                    {project.interazioni}
-                                    {project.time && <span className="Aktiv-Grotesk-RegularItalic"> {project.time}</span>}
-                                </p>
-                            )}
+                        {/* BOTTONE A CASCATA */}
+                        <div className="stats-wrapper mt-4 bg-dark text-white">
+                            <Button
+                                onClick={() => setOpen(!open)}
+                                aria-controls="stats-collapse-text"
+                                aria-expanded={open}
+                                variant="link"
+                                className="p-2 text-decoration-none Aktiv-Grotesk-Black text-white fs-5 d-flex align-items-center"
+                            >
+                                {/* Icona che ruota per dare l'idea di apertura */}
+                                <h1 className="Aktiv-Grotesk-Black fs-3 m-0 p-0">{open ? 'I RISULTATI' : 'I RISULTATI'}</h1>
+                                <span style={{
+                                    transform: open ? 'rotate(180deg)' : 'rotate(0deg)',
+                                    transition: 'transform 0.3s ease',
+                                    display: 'inline-block',
+                                    marginLeft: '10px'
+                                }}>
+                                    <i class="fa-solid fa-angle-down fs-2"></i>
+                                </span>
+                            </Button>
 
-                            {project.visualizzazioni && (
-                                <p className="Aktiv-Grotesk-Black fs-3">
-                                    {project.visualizzazioni}
-                                    {project.time && <span className="Aktiv-Grotesk-RegularItalic"> {project.time}</span>}
-                                </p>
-                            )}
+                            <Collapse in={open}>
+                                <div id="stats-collapse-text">
+                                    {/* Rimuovo mt-4 qui per farlo sembrare attaccato al bottone */}
+                                    <div className="stats-container py-2 px-3">
+                                        {project.interazioni && (
+                                            <p className="Aktiv-Grotesk-Black fs-2 mb-1 pt-2">
+                                                {project.interazioni}
+                                                {project.time && (
+                                                    <span className="Aktiv-Grotesk-RegularItalic fs-4"> {project.time}</span>
+                                                )}
+                                            </p>
+                                        )}
+
+                                        {project.visualizzazioni && (
+                                            <p className="Aktiv-Grotesk-Black fs-2">
+                                                {project.visualizzazioni}
+                                                {project.time && (
+                                                    <span className="Aktiv-Grotesk-RegularItalic fs-4"> {project.time}</span>
+                                                )}
+                                            </p>
+                                        )}
+                                    </div>
+                                </div>
+                            </Collapse>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     );

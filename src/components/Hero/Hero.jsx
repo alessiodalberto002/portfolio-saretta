@@ -9,16 +9,12 @@ import img7p1 from "../../assets/img/7p/01.png"
 import img7p2 from "../../assets/img/7p/02 (1).png"
 
 const Hero = () => {
-    // Array originale delle immagini
     const originalPhotos = [copScalo, imgScalo3, copAmami, imgAmami1, imgAmami2, img7p1, img7p2];
-
-    // Duplichiamo l'array una volta sola per permettere il loop fluido
-    const photos = [...originalPhotos, ...originalPhotos, ...originalPhotos, ...originalPhotos, ...originalPhotos, ...originalPhotos];
+    const photos = [...originalPhotos, ...originalPhotos, ...originalPhotos]; // Triplicarle è solitamente sufficiente
 
     return (
-        <section id="Home" className="hero-minimal w-100 mt-4">
-
-            <div className="h-100 w-100 d-flex flex-column justify-content-center align-items-center">
+        <section id="Home" className="hero-minimal-fixed">
+            <div className="hero-content-wrapper">
                 <div className="hero-slider-container">
                     <div className="hero-slider-track">
                         {photos.map((src, index) => (
@@ -29,13 +25,11 @@ const Hero = () => {
                     </div>
                 </div>
 
-                <div className="hero-footer w-100 d-flex justify-content-end pe-4 pe-lg-5">
+                <div className="hero-footer">
                     <h1 className="hero-title fw-lighter text-uppercase m-0">(Think Create)</h1>
                 </div>
             </div>
-
         </section>
     );
 };
-
 export default Hero;
