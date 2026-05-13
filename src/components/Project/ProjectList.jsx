@@ -5,7 +5,7 @@ import { section } from "framer-motion/client";
 const ProjectList = () => {
     return (
         <section id="portfolio">
-            <div className="container d-flex flex-column justify-content-center bg-white py-5">
+            <div className="container d-flex flex-column justify-content-center bg-white" style={{padding: "150px 0"}}>
                 <div className="mx-auto" style={{ maxWidth: '900px', width: '100%' }}>
                     <h1 className="text-center text-uppercase mb-4 Aktiv-Grotesk-Black" style={{ fontSize: "50px" }}>
                         work

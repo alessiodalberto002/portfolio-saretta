@@ -7,7 +7,7 @@ const About = () => {
     const [showBlock, setShowBlock] = useState(false);
 
     return (
-        <section id="about" className="min-vh-100 w-100 py-5">
+        <section id="about" className="min-vh-100 w-100" style={{padding:"150px 0"}}>
 
             {/* SEZIONE DESKTOP */}
             <div className="d-none d-md-block h-100">
@@ -17,22 +17,21 @@ const About = () => {
                     </h1>
 
                     <div className="d-flex align-items-center justify-content-center gap-5">
-                        <img className="w-25 rounded-4 shadow" src={aboutImg} alt="Profile" />
+                        <img className="w-25" src={aboutImg} alt="Profile" />
 
                         <div className="w-25 Aktiv-Grotesk-Light" style={{ fontSize: "20px" }}>
                             <p>
                                 Fuori da Photoshop sono un costante work in progress, ma davanti a un pc so esattamente cosa fare.
-                                Mi nutro di caﬀè, intuizioni notturne e libri, forse troppi.
+                                Mi nutro di caffè, intuizioni notturne e libri, forse troppi.
                                 Mi piacciono le sfide, mi piace raccontare, perdermi tra pensieri e colori e trovare soluzioni.
                                 Mi piacciono le tele bianche e i punti di partenza. <br /><br />
                                 Tra un progetto e l’altro cambio interessi con la stessa facilità con cui cambio playlist...
                                 oggi disegno, domani uncinetto, poi sport.
                                 È qui che per me inizia davvero il processo creativo.<br /><br />
-                                Ora che hai letto di me puoi giudicarmi
-                                <a href="https://linkedin.com" target="_blank" className="text-dark mx-2">(<i className="fa-brands fa-linkedin-in">)</i></a>,
-                                <a href="mailto:tua@email.it" className="text-dark mx-2">scrivermi</a>,
-                                <a href="https://instagram.com" target="_blank" className="text-dark mx-2">seguirmi (<i className="fa-brands fa-instagram"></i>)</a>
-                                o <span className="text-danger fw-bold cursor-pointer text-uppercase" style={{ cursor: 'pointer' }} onClick={() => setShowBlock(true)}>bloccarmi</span>.
+                                Ora che hai letto di me, puoi <a href="https://linkedin.com" target="_blank" className="fw-bold mx-1 text-decoration-none text-danger text-uppercase">giudicarmi</a>,
+                                <a href="mailto:tua@email.it" className="fw-bold mx-1 text-decoration-none text-danger text-uppercase">scrivermi</a>,
+                                <a href="https://instagram.com" target="_blank" className="fw-bold mx-1 text-decoration-none text-danger text-uppercase">seguirmi</a>
+                                o semplicemente <span className="text-danger fw-bold text-uppercase ms-1" style={{ cursor: 'pointer' }} onClick={() => setShowBlock(true)}>bloccarmi</span>.
                             </p>
                             <p className="Aktiv-Grotesk-Black mt-3">A TE LA SCELTA!</p>
                         </div>
@@ -46,21 +45,20 @@ const About = () => {
                     <h1 className="text-uppercase mb-4 text-center Aktiv-Grotesk-Black" style={{ fontSize: "clamp(35px, 8vw, 50px)" }}>
                         about me
                     </h1>
-                    <img className="w-75 mb-4 rounded-4" src={aboutImg} alt="Profile" />
+                    <img className="w-75 mb-4" src={aboutImg} alt="Profile" />
                     <div className="Aktiv-Grotesk-Light text-center" style={{ fontSize: "clamp(16px, 4vw, 20px)" }}>
                         <p>
                             Fuori da Photoshop sono un costante work in progress, ma davanti a un pc so esattamente cosa fare.
-                            Mi nutro di caﬀè, intuizioni notturne e libri, forse troppi.
+                            Mi nutro di caffè, intuizioni notturne e libri, forse troppi.
                             Mi piacciono le sfide, mi piace raccontare, perdermi tra pensieri e colori e trovare soluzioni.
                             Mi piacciono le tele bianche e i punti di partenza. <br /><br />
                             Tra un progetto e l’altro cambio interessi con la stessa facilità con cui cambio playlist...
                             oggi disegno, domani uncinetto, poi sport.
                             È qui che per me inizia davvero il processo creativo.<br /><br />
-                            Ora che hai letto di me puoi giudicarmi
-                            <a href="https://linkedin.com" target="_blank" className="text-dark mx-2">(<i className="fa-brands fa-linkedin-in">)</i></a>,
-                            <a href="mailto:tua@email.it" className="text-dark mx-2">scrivermi</a>,
-                            <a href="https://instagram.com" target="_blank" className="text-dark mx-2">seguirmi (<i className="fa-brands fa-instagram"></i>)</a>
-                            o <span className="text-danger fw-bold cursor-pointer text-uppercase" style={{ cursor: 'pointer' }} onClick={() => setShowBlock(true)}>bloccarmi</span>.
+                            Ora che hai letto di me, puoi <a href="https://linkedin.com" target="_blank" className="fw-bold mx-1 text-decoration-none text-danger">giudicarmi</a>,
+                            <a href="mailto:tua@email.it" className="fw-bold mx-1 text-decoration-none text-danger">scrivermi</a>,
+                            <a href="https://instagram.com" target="_blank" className="fw-bold mx-1 text-decoration-none text-danger">seguirmi</a>
+                            o semplicemente <span className="text-danger fw-bold text-uppercase ms-1" style={{ cursor: 'pointer' }} onClick={() => setShowBlock(true)}>bloccarmi</span>.
                         </p>
                     </div>
                 </div>
