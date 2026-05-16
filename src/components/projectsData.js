@@ -17,6 +17,7 @@ import img7p2 from "../assets/img/7p/02 (1).png"
 import img7p3 from "../assets/img/7p/03 (1).png"
 import img7p4 from "../assets/img/7p/05 (3).png"
 import img7p5 from "../assets/img/7p/06 (6).png"
+import video7p from "../assets/img/7p/Mani.mov"
 
 export const projectsData = [
     {
@@ -24,7 +25,9 @@ export const projectsData = [
         name: "scalo24 - digital",
         title: "Sharing is pop",
         subtitle: "Take me back to life",
-        description: "Non solo food, ma condivisione, atmosfera e genuinità. Il progetto nasce con l’idea di trasformare il profilo del locale in uno spazio capace di parlare davvero alla Gen Z, attraverso un linguaggio semplice, diretto e vicino alla community. Un tone of voice spontaneo, leggero e autentico, pensato per far sentire il pubblico parte dell’esperienza ancora prima di entrare nel locale. Ogni contenuto diventa così un piccolo momento da vivere, condividere e ricordare: qualcosa in cui riconoscersi, fermarsi e interagire in modo naturale. Il risultato è un profilo riconoscibile, fresco e pieno di personalità, dove estetica e strategia convivono senza forzature. Non una semplice vetrina digitale, ma un racconto continuo capace di trasmettere l’energia del brand e creare una connessione reale con la community.",
+        description1: "Non solo food, ma condivisione, atmosfera e genuinità. Il progetto nasce con l’idea di trasformare il profilo del locale in uno spazio capace di parlare davvero alla Gen Z, attraverso un linguaggio semplice, diretto e vicino alla community. Un tone of voice spontaneo, leggero e autentico, pensato per far sentire il pubblico parte dell’esperienza ancora prima di entrare nel locale.",
+        description2: "Ogni contenuto diventa così un piccolo momento da vivere, condividere e ricordare: qualcosa in cui riconoscersi, fermarsi e interagire in modo naturale. Il risultato è un profilo riconoscibile, fresco e pieno di personalità, dove estetica e strategia convivono senza forzature.",
+        description3: " Non una semplice vetrina digitale, ma un racconto continuo capace di trasmettere l’energia del brand e creare una connessione reale con la community.",
         interazioni: "+70.000 INTERAZIONI",
         visualizzazioni: "+1.600.000 VISUALIZZAZIONI",
         time: "in un anno",
@@ -42,7 +45,9 @@ export const projectsData = [
         name: "amami teatro - event",
         title: "in scena e fuori scena",
         subtitle: "Molto più di un semplice festival",
-        description: "Amami Teatro è molto più di un evento: è energia, movimento e spettacolo che prende vita per 8.640 minuti ininterrotti all’interno del Teatro Marrucino di Chieti. L’obiettivo del progetto era raccontare tutta l’intensità del festival attraverso una comunicazione capace di trasmetterne il ritmo, l’atmosfera e le emozioni sul palco e dietro le quinte. Teaser, backstage, reel e trend diventano strumenti per avvicinare il pubblico all’esperienza, rendendolo partecipe di tutto ciò che avviene all’interno del Teatro. Il tone of voice è dinamico, coinvolgente e contemporaneo, pensato per raccontare qualcosa di vicino, vivo e condivisibile anche sui social. Il risultato è un feed riconoscibile e in continua evoluzione, dove arte e comunicazione si incontrano in modo naturale in un racconto visivo capace di creare attesa, connessione e partecipazione attorno all’esperienza.",
+        description1: "Amami Teatro è molto più di un evento: è energia, movimento e spettacolo che prende vita per 8.640 minuti ininterrotti all’interno del Teatro Marrucino di Chieti. L’obiettivo del progetto era raccontare tutta l’intensità del festival attraverso una comunicazione capace di trasmetterne il ritmo, l’atmosfera e le emozioni sul palco e dietro le quinte.", 
+        description2: "Teaser, backstage, reel e trend diventano strumenti per avvicinare il pubblico all’esperienza, rendendolo partecipe di tutto ciò che avviene all’interno del Teatro. Il tone of voice è dinamico, coinvolgente e contemporaneo, pensato per raccontare qualcosa di vicino, vivo e condivisibile anche sui social.",
+        description3: "Il risultato è un feed riconoscibile e in continua evoluzione, dove arte e comunicazione si incontrano in modo naturale in un racconto visivo capace di creare attesa, connessione e partecipazione attorno all’esperienza.",
         interazioni: "+157.000 PERSONE RAGGIUNTE",
         time: "in una settimana",
         image_cop: copAmami,
@@ -60,9 +65,12 @@ export const projectsData = [
         name: "sevenplast - digital",
         title: "make it plastic",
         subtitle: "make it unique",
-        description: "L’obiettivo del progetto era trasformare un prodotto spesso dato per scontato in qualcosa capace di distinguersi e raccontare valore. Da oltre 40 anni, Sevenplast opera nel settore degli imballaggi in polietilene per il mercato B2B, ma la sfida era andare oltre il prodotto stesso e costruire una comunicazione con un’identità forte e riconoscibile. Il concept creativo nasce dall’idea di trattare ogni dettaglio con la stessa cura riservata a un prodotto di alta moda. Texture, materiali, luci e composizioni diventano così parte di un racconto visivo più ricercato, dove anche l’imballaggio assume carattere, presenza ed estetica. La comunicazione punta su precisione, qualità e attenzione ai particolari, trasformando un settore tecnico in qualcosa di visivamente contemporaneo e interessante da osservare. Il risultato è un feed pulito, distintivo e coerente, capace non solo di valorizzare il prodotto, ma anche di trasmettere una storia fatta di esperienza, aﬃdabilità e scelte consapevoli.",
+        description1: "L’obiettivo del progetto era trasformare un prodotto spesso dato per scontato in qualcosa capace di distinguersi e raccontare valore. Da oltre 40 anni, Sevenplast opera nel settore degli imballaggi in polietilene per il mercato B2B, ma la sfida era andare oltre il prodotto stesso e costruire una comunicazione con un’identità forte e riconoscibile.",
+        description2: "Il concept creativo nasce dall’idea di trattare ogni dettaglio con la stessa cura riservata a un prodotto di alta moda. Texture, materiali, luci e composizioni diventano così parte di un racconto visivo più ricercato, dove anche l’imballaggio assume carattere, presenza ed estetica.",
+        description3: " La comunicazione punta su precisione, qualità e attenzione ai particolari, trasformando un settore tecnico in qualcosa di visivamente contemporaneo e interessante da osservare. Il risultato è un feed pulito, distintivo e coerente, capace non solo di valorizzare il prodotto, ma anche di trasmettere una storia fatta di esperienza, aﬃdabilità e scelte consapevoli.",
         interazioni: "+157.000 PERSONE RAGGIUNTE",
-        image_cop: img7p3,
+        image_cop: img7p5,
+        video: video7p,
         gallery: [
             img7p1,
             img7p2,
@@ -74,6 +82,11 @@ export const projectsData = [
     {
         id: 4,
         name: "scopriamoci - book",
-        image_cop: "/src/assets/img/home/06.png",
+        title: "scopriamoci",
+        subtitle: "Introspezione e sessualità",
+        description1: "In questo libro l’obiettivo era quello porre uno sguardo sulle nostre emozioni e di riflettere sulle nostre sensazioni in un viaggio alla scoperta di qualcosa di nuovo. Per farlo ho utilizzato gli scatti di Robert Mapplethorpe e, attraverso il suo studio, ho approfondito aspetti legati alle emozioni, ai legami e alla sessualità.",
+        description2: "Il progetto si divide in due libri: Scopriamoci, in cui vengono analizzate le scelte del fotografo e i suoi scatti vengono utilizzati come pretesto per raccontare aspetti della sessualità considerati tabù, e Aftercare, in cui, proprio come in un rapporto, ci si prende un momento per prendersi cura di sé stessi quando la lettura si fa troppo intensa.",
+        description3: "Alla fine del libro si trovano le risposte ad una ricerca qualitativa che nasceva da una semplice domanda: questi scatti di nudo, per te, sono arte?",
+        image_cop: img7p3,
     },
 ];

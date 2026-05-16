@@ -26,7 +26,6 @@ const ProjectDetail = () => {
                                 src={project.video}
                                 autoPlay
                                 loop
-                                muted
                                 playsInline
                                 className="object-fit-cover h-100 w-100">
                             </video>
@@ -54,7 +53,13 @@ const ProjectDetail = () => {
                             {project.subtitle}
                         </h2>
                         <p className="mt-4 Aktiv-Grotesk-Light fs-5">
-                            {project.description}
+                            {project.description1}
+                        </p>
+                        <p className="mt-4 Aktiv-Grotesk-Light fs-5">
+                            {project.description2}
+                        </p>
+                        <p className="mt-4 Aktiv-Grotesk-Light fs-5">
+                            {project.description3}
                         </p>
 
                         {/* BOTTONE A CASCATA */}
@@ -67,7 +72,7 @@ const ProjectDetail = () => {
                                 className="p-2 text-decoration-none Aktiv-Grotesk-Black text-white fs-5 d-flex align-items-center"
                             >
                                 {/* Icona che ruota per dare l'idea di apertura */}
-                                <h1 className="Aktiv-Grotesk-Black fs-3 m-0 p-0">{open ? 'I RISULTATI' : 'I RISULTATI'}</h1>
+                                <h1 className="Aktiv-Grotesk-Black fs-3 ms-2 my-0 p-0">{open ? 'I RISULTATI' : 'I RISULTATI'}</h1>
                                 <span style={{
                                     transform: open ? 'rotate(180deg)' : 'rotate(0deg)',
                                     transition: 'transform 0.3s ease',
@@ -86,7 +91,7 @@ const ProjectDetail = () => {
                                             <p className="Aktiv-Grotesk-Black fs-2 mb-1 pt-2">
                                                 {project.interazioni}
                                                 {project.time && (
-                                                    <span className="Aktiv-Grotesk-RegularItalic fs-4"> {project.time}</span>
+                                                    <span className="Aktiv-Grotesk-Regular fs-4"> {project.time}</span>
                                                 )}
                                             </p>
                                         )}
@@ -95,7 +100,7 @@ const ProjectDetail = () => {
                                             <p className="Aktiv-Grotesk-Black fs-2">
                                                 {project.visualizzazioni}
                                                 {project.time && (
-                                                    <span className="Aktiv-Grotesk-RegularItalic fs-4"> {project.time}</span>
+                                                    <span className="Aktiv-Grotesk-Regular fs-4"> {project.time}</span>
                                                 )}
                                             </p>
                                         )}

@@ -11,7 +11,7 @@ import img7p1 from "../../assets/img/7p/01.png"
 import img7p2 from "../../assets/img/7p/02 (1).png"
 
 const Hero = () => {
-    const text = "(think create)";
+    const text = "think, create";
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
@@ -95,7 +95,7 @@ const Hero = () => {
                 <motion.h1
                     initial="hidden"
                     animate="visible"
-                    className="fw-light text-dark tracking-tight m-0"
+                    className="fw-light text-dark tracking-tight m-0 text-uppercase"
                     style={{
                         letterSpacing: '-0.05em',
                         fontSize: isMobile ? '2.8rem' : 'calc(2rem + 5vw)',
@@ -121,17 +121,17 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 2.5 }}
-                className="position-absolute bottom-0 start-50 translate-middle-x mb-4"
+                className="position-absolute bottom-0 start-50 translate-middle-x mt-5"
                 style={{ zIndex: 20 }}
             >
                 <div className="d-flex flex-column align-items-center">
-                    <div className="bg-dark" style={{ width: '1px', height: '50px', opacity: 0.2 }} />
+                    <div className="bg-dark" style={{ width: '2px', height: '50px', opacity: 0.2 }} />
                     <div className="position-absolute top-0 w-100" style={{ height: '50px', overflow: 'hidden' }}>
                         <motion.div
                             animate={{ y: [-50, 50] }}
                             transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
                             className="bg-dark mx-auto"
-                            style={{ width: '1px', height: '100%' }}
+                            style={{ width: '2px', height: '100%' }}
                         />
                     </div>
                 </div>

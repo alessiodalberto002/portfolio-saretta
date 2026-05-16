@@ -7,7 +7,7 @@ const SingleProject = ({ id, image, name }) => {
             <div className="project-card w-100 border">
                 <div
                     className="overflow-hidden d-flex flex-column"
-                    style={{ aspectRatio: "4/5", width: '100%' }}
+                    style={{ width: '100%' }}
                 >
                     <img
                         className="w-100 object-fit-cover"
@@ -16,7 +16,7 @@ const SingleProject = ({ id, image, name }) => {
                         alt={name}
                     />
                     <div className="d-flex align-items-center bg-white" style={{ height: "15%" }}>
-                        <p className="Aktiv-Grotesk-Light px-2 text-uppercase mb-0 text-truncate"
+                        <p className="Aktiv-Grotesk-Light px-2 text-uppercase mb-0 text-truncate py-3"
                             style={{ fontSize: '20px', letterSpacing: '0.5px' }}>
                             {name}
                         </p>

@@ -190,6 +190,10 @@ h1.hero-text:nth-of-type(2) {
     margin-bottom: 6px;
 }
 
+.padding-mobile {
+    padding: 55px 0;
+}
+
 /* REGOLE DESKTOP (Ripristino esatto del tuo layout) */
 @media (min-width: 992px) {
     .hero-text {
@@ -221,6 +225,10 @@ h1.hero-text:nth-of-type(2) {
 
     .padding-text-desktop {
         padding-right: 150px;
+    }
+
+    .padding-desktop {
+        padding: 150px 0;
     }
 
 }
