@@ -55,11 +55,12 @@ const About = () => {
                             Tra un progetto e l’altro cambio interessi con la stessa facilità con cui cambio playlist...
                             oggi disegno, domani uncinetto, poi sport.
                             È qui che per me inizia davvero il processo creativo.<br /><br />
-                            Ora che hai letto di me, puoi <a href="https://linkedin.com" target="_blank" className="fw-bold mx-1 text-decoration-underline text-dark">giudicarmi</a>,
-                            <a href="mailto:tua@email.it" className="fw-bold mx-1 text-decoration-underline text-dark">scrivermi</a>,
-                            <a href="https://instagram.com" target="_blank" className="fw-bold mx-1 text-decoration-underline text-dark">seguirmi</a>
-                            o semplicemente <span className="text-danger fw-bold text-uppercase ms-1" style={{ cursor: 'pointer' }} onClick={() => setShowBlock(true)}>bloccarmi</span>.
+                            Ora che hai letto di me, puoi <a href="https://linkedin.com" target="_blank" className="mx-1 text-decoration-underline text-dark">giudicarmi,</a>
+                            <a href="mailto:tua@email.it" className="mx-1 text-decoration-underline text-dark">scrivermi,</a>
+                            <a href="https://instagram.com" target="_blank" className="mx-1 text-decoration-underline text-dark">seguirmi</a>
+                            o<span className="text-decoration-underline ms-1" style={{ cursor: 'pointer' }} onClick={() => setShowBlock(true)}>bloccarmi</span>.
                         </p>
+                        <p className="Aktiv-Grotesk-LightItalic mt-3">A te la scelta!</p>
                     </div>
                 </div>
             </div>
