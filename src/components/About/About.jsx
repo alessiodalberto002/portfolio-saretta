@@ -1,13 +1,14 @@
 import React, { useState } from 'react'; // <--- MANCAVA QUESTO
 import aboutImg from "../../assets/img/dolcina.gif";
 import { Modal } from 'react-bootstrap';
+import { motion } from "framer-motion";
 
 const About = () => {
     // 1. Definiamo lo stato per il Modal
     const [showBlock, setShowBlock] = useState(false);
 
     return (
-        <section id="about" className="min-vh-100 w-100" style={{padding:"150px 0"}}>
+        <section id="about" className="min-vh-100 w-100" style={{ padding: "150px 0" }}>
 
             {/* SEZIONE DESKTOP */}
             <div className="d-none d-md-block h-100">
@@ -28,10 +29,32 @@ const About = () => {
                                 Tra un progetto e l’altro cambio interessi con la stessa facilità con cui cambio playlist:
                                 oggi disegno, domani uncinetto, poi sport.
                                 È qui che per me inizia davvero il processo creativo.<br /><br />
-                                Ora che hai letto di me, puoi <a href="https://www.linkedin.com/in/sara-molino-6604882b3/" target="_blank" className=" mx-1 text-decoration-underline  text-dark">giudicarmi,</a>
-                                <a href="mailto:saramolino35@gmail.com" className=" mx-1 text-decoration-underline  text-dark">scrivermi,</a>
-                                <a href="https://www.instagram.com/salefino.sm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" className=" mx-1 text-decoration-underline  text-dark">seguirmi</a>
-                                o <span className="text-dark text-decoration-underline ms-1" style={{ cursor: 'pointer' }} onClick={() => setShowBlock(true)}>bloccarmi</span>.
+                                Ora che hai letto di me, puoi
+                                <motion.a href="https://www.linkedin.com/in/sara-molino-6604882b3/" target="_blank"
+                                    className="mx-1 text-decoration-underline text-dark d-inline-block transition-all"
+                                    style={{ fontWeight: 300, willChange: "font-weight" }}// Suggerisce al browser di ottimizzare l'animazione di questa proprietà
+                                    whileHover={{ fontWeight: 700 }}
+                                    whileTap={{ scale: 0.95 }}
+                                >
+                                    giudicarmi,
+                                </motion.a>
+                                <motion.a href="mailto:saramolino35@gmail.com" className=" mx-1 text-decoration-underline text-dark"
+                                    style={{ fontWeight: 300, willChange: "font-weight" }}// Suggerisce al browser di ottimizzare l'animazione di questa proprietà
+                                    whileHover={{ fontWeight: 700 }}
+                                    whileTap={{ scale: 0.95 }}>scrivermi,</motion.a>
+                                <motion.a href="https://www.instagram.com/salefino.sm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" className=" mx-1 text-decoration-underline  text-dark" style={{ fontWeight: 300, willChange: "font-weight" }}// Suggerisce al browser di ottimizzare l'animazione di questa proprietà
+                                    whileHover={{ fontWeight: 700 }}
+                                    whileTap={{ scale: 0.95 }}>seguirmi</motion.a>
+                                o <motion.span
+                                    className="text-decoration-underline ms-1" // Riscattata la classe text-dark
+                                    initial={{ color: "#000000", fontWeight: 300 }} // Definiamo qui il colore di partenza
+                                    style={{ willChange: "font-weight, color", cursor: "pointer" }}
+                                    whileHover={{ fontWeight: 700, color: "#FF0000" }} // Ora il rosso funzionerà alla perfezione
+                                    whileTap={{ scale: 0.95 }}
+                                    onClick={() => setShowBlock(true)}
+                                >
+                                    bloccarmi
+                                </motion.span>.
                             </p>
                             <p className="Aktiv-Grotesk-LightItalic mt-3">A te la scelta!</p>
                         </div>
@@ -55,10 +78,32 @@ const About = () => {
                             Tra un progetto e l’altro cambio interessi con la stessa facilità con cui cambio playlist:
                             oggi disegno, domani uncinetto, poi sport.
                             È qui che per me inizia davvero il processo creativo.<br /><br />
-                            Ora che hai letto di me, puoi <a href="https://www.linkedin.com/in/sara-molino-6604882b3/" target="_blank" className="mx-1 text-decoration-underline text-dark">giudicarmi,</a>
-                            <a href="mailto:saramolino35@gmail.com" className="mx-1 text-decoration-underline text-dark">scrivermi,</a>
-                            <a href="https://www.instagram.com/salefino.sm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" className="mx-1 text-decoration-underline text-dark">seguirmi</a>
-                            o<span className="text-decoration-underline ms-1" style={{ cursor: 'pointer' }} onClick={() => setShowBlock(true)}>bloccarmi</span>.
+                            Ora che hai letto di me, puoi
+                            <motion.a href="https://www.linkedin.com/in/sara-molino-6604882b3/" target="_blank"
+                                className="mx-1 text-decoration-underline text-dark d-inline-block transition-all"
+                                style={{ fontWeight: 300, willChange: "font-weight" }}// Suggerisce al browser di ottimizzare l'animazione di questa proprietà
+                                whileHover={{ fontWeight: 700 }}
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                giudicarmi,
+                            </motion.a>
+                            <motion.a href="mailto:saramolino35@gmail.com" className=" mx-1 text-decoration-underline text-dark"
+                                style={{ fontWeight: 300, willChange: "font-weight" }}// Suggerisce al browser di ottimizzare l'animazione di questa proprietà
+                                whileHover={{ fontWeight: 700 }}
+                                whileTap={{ scale: 0.95 }}>scrivermi,</motion.a>
+                            <motion.a href="https://www.instagram.com/salefino.sm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" className=" mx-1 text-decoration-underline  text-dark" style={{ fontWeight: 300, willChange: "font-weight" }}// Suggerisce al browser di ottimizzare l'animazione di questa proprietà
+                                whileHover={{ fontWeight: 700 }}
+                                whileTap={{ scale: 0.95 }}>seguirmi</motion.a>
+                            o <motion.span
+                                className="text-decoration-underline ms-1" // Riscattata la classe text-dark
+                                initial={{ color: "#000000", fontWeight: 300 }} // Definiamo qui il colore di partenza
+                                style={{ willChange: "font-weight, color", cursor: "pointer" }}
+                                whileHover={{ fontWeight: 700, color: "#FF0000" }} // Ora il rosso funzionerà alla perfezione
+                                whileTap={{ scale: 0.95 }}
+                                onClick={() => setShowBlock(true)}
+                            >
+                                bloccarmi
+                            </motion.span>.
                         </p>
                         <p className="Aktiv-Grotesk-LightItalic mt-3">A te la scelta!</p>
                     </div>

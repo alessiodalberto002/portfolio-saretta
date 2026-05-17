@@ -100,6 +100,10 @@ body {
     font-family: 'ClashGrotesk', sans-serif;
 }
 
+.transition-all {
+    transition: all 0.05s ease-in-out
+}
+
 
 a {
     text-decoration: none;
