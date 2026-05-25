@@ -72,7 +72,7 @@ const About = () => {
                                 Ora che hai letto di me, puoi
                                 <motion.a href="https://www.linkedin.com/in/sara-molino-6604882b3/" target="_blank"
                                     className="mx-1 underline text-black inline-block transition-all"
-                                    style={{ fontWeight: 300, willChange: "font-weight" }}
+                                    style={{ fontWeight: 300, willChange: "font-weight"}}
                                     whileHover={{ fontWeight: 700 }}
                                     whileTap={{ scale: 0.95 }}
                                 >

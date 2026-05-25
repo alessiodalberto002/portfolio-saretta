@@ -41,7 +41,7 @@ const Navbar = ({ links }) => {
                     {/* Logo - Cambia colore in base a isOpen */}
                     <a
                         href="/"
-                        className="uppercase Aktiv-Grotesk-Black no-underline"
+                        className="uppercase Aktiv-Grotesk-Black text-decoration-none"
                         style={{
                             color: isOpen ? "white" : "black",
                             fontSize: "25px",
@@ -55,7 +55,7 @@ const Navbar = ({ links }) => {
                     <ul className="hidden md:flex m-0 p-0 list-none">
                         {links.map((item) => (
                             <li key={item.id} className="mr-8 Aktiv-Grotesk-Regular">
-                                <a href={item.path} className="text-black text-xl no-underline">
+                                <a href={item.path} className="text-black text-xl text-decoration-none">
                                     {item.linkName}
                                 </a>
                             </li>

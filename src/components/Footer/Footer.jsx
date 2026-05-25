@@ -11,7 +11,7 @@ const Footer = () => {
 
                     <motion.a
                         href="mailto:saramolino35@gmail.com"
-                        className="m-0 Aktiv-Grotesk-Light text-black"
+                        className="m-0 Aktiv-Grotesk-Light text-black text-decoration-none"
                         style={{ fontWeight: 300, willChange: "font-weight" }} // Suggerisce al browser di ottimizzare l'animazione di questa proprietà
                         whileHover={{ fontWeight: 700, y: -5, rotate: 2 }}
                         whileTap={{ scale: 0.95 }}
@@ -26,7 +26,7 @@ const Footer = () => {
                 </div>
 
                 {/* Testo finale centrato su mobile per estetica, mantenuto normale su desktop */}
-                <motion.a href="#" className="Aktiv-Grotesk-Light text-black md:text-left mt-3 md:mt-2 block">
+                <motion.a href="#" className="Aktiv-Grotesk-Light text-black md:text-left mt-3 md:mt-2 block text-decoration-none">
                     Twinkle twinkle little design, how I wonder what you'll shine! Up above the page so high, ideas sparkling in my eye.
                 </motion.a>
             </div>

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const SingleProject = ({ id, image, name }) => {
     return (
-        <Link to={`/project/${id}`} className="no-underline text-black block">
+        <Link to={`/project/${id}`} className="text-decoration-none text-black block">
             <motion.div
                 className="project-card w-full border"
                 // ANIMAZIONE AL REALE INGRESSO NELLA VIEWPORT (SCROLL)
