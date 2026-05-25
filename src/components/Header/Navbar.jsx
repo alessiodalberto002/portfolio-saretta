@@ -35,14 +35,14 @@ const Navbar = ({ links }) => {
 
     return (
         <>
-            <nav className="position-fixed w-100 p-3" style={navStyle}>
-                <div className="container-fluid d-flex justify-content-between align-items-center" style={{ position: 'relative', zIndex: 1001 }}>
+            <nav className="fixed w-full p-3" style={navStyle}>
+                <div className="w-full flex justify-between items-center relative z-[1001]">
+                    
                     {/* Logo - Cambia colore in base a isOpen */}
                     <a
                         href="/"
-                        className="text-uppercase Aktiv-Grotesk-Black"
+                        className="uppercase Aktiv-Grotesk-Black no-underline"
                         style={{
-                            textDecoration: "none",
                             color: isOpen ? "white" : "black",
                             fontSize: "25px",
                             transition: "color 0.3s ease"
@@ -52,10 +52,10 @@ const Navbar = ({ links }) => {
                     </a>
 
                     {/* Desktop Menu */}
-                    <ul className="d-none d-md-flex m-0 p-0" style={{ listStyle: "none" }}>
+                    <ul className="hidden md:flex m-0 p-0 list-none">
                         {links.map((item) => (
-                            <li key={item.id} className="me-4 Aktiv-Grotesk-Regular">
-                                <a href={item.path} className="text-dark fs-4" style={{ textDecoration: "none" }}>
+                            <li key={item.id} className="mr-8 Aktiv-Grotesk-Regular">
+                                <a href={item.path} className="text-black text-xl no-underline">
                                     {item.linkName}
                                 </a>
                             </li>
@@ -64,7 +64,7 @@ const Navbar = ({ links }) => {
 
                     {/* Hamburger Icon - Cambia colore e ruota */}
                     <div
-                        className="d-md-none margin-bottom-mobile"
+                        className="md:hidden margin-bottom-mobile"
                         onClick={toggleMenu}
                         style={{
                             cursor: 'pointer',
@@ -74,7 +74,7 @@ const Navbar = ({ links }) => {
                             lineHeight: '1'
                         }}
                     >
-                        <span style={{ display: 'block', transform: isOpen ? 'rotate(180deg)' : 'none' }}>
+                        <span className="block" style={{ transform: isOpen ? 'rotate(180deg)' : 'none' }}>
                             {isOpen ? '✕' : '☰'}
                         </span>
                     </div>
@@ -82,7 +82,7 @@ const Navbar = ({ links }) => {
 
                 {/* Mobile Menu Full-Screen */}
                 <div style={mobileOverlayStyle}>
-                    <ul className="m-0 p-0 w-100 text-center" style={{ listStyle: "none" }}>
+                    <ul className="m-0 p-0 w-full text-center list-none">
                         {links.map((item, i) => (
                             <li
                                 key={item.id}
@@ -96,13 +96,9 @@ const Navbar = ({ links }) => {
                                 <a
                                     href={item.path}
                                     onClick={(e) => setIsOpen(false)}
-                                    className="Aktiv-Grotesk-Black"
+                                    className="Aktiv-Grotesk-Black inline-block text-white uppercase no-underline"
                                     style={{
-                                        textDecoration: "none",
-                                        display: 'inline-block',
                                         fontSize: '2.5rem',
-                                        color: 'white',
-                                        textTransform: 'uppercase',
                                         letterSpacing: '2px',
                                     }}
                                 >

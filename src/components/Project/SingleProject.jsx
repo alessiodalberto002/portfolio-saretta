@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 const SingleProject = ({ id, image, name }) => {
     return (
-        <Link to={`/project/${id}`} className="text-decoration-none text-dark d-block">
+        <Link to={`/project/${id}`} className="no-underline text-black block">
             <motion.div
-                className="project-card w-100 border"
+                className="project-card w-full border"
                 // ANIMAZIONE AL REALE INGRESSO NELLA VIEWPORT (SCROLL)
                 initial={{ opacity: 0, y: 40, scale: 0.98 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -24,19 +24,19 @@ const SingleProject = ({ id, image, name }) => {
                 whileTap={{ scale: 0.98 }}
             >
                 <div
-                    className="overflow-hidden d-flex flex-column"
+                    className="overflow-hidden flex flex-col"
                     style={{ width: '100%' }}
                 >
                     <div className="overflow-hidden" style={{ height: "85%" }}>
                         <img
-                            className="w-100 h-100 object-fit-cover"
+                            className="w-full h-full object-cover"
                             src={image}
                             alt={name}
                         />
                     </div>
 
-                    <div className="d-flex align-items-center bg-white" style={{ height: "15%" }}>
-                        <p className="Aktiv-Grotesk-Light px-2 text-uppercase mb-0 text-truncate py-3"
+                    <div className="flex items-center bg-white" style={{ height: "15%" }}>
+                        <p className="Aktiv-Grotesk-Light px-2 uppercase m-0 truncate py-3"
                             style={{ fontSize: '20px', letterSpacing: '0.5px' }}>
                             {name}
                         </p>

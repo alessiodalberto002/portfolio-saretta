@@ -3,28 +3,28 @@ import imgMethods from "../../assets/img/gif2.gif"
 const Methods = () => {
 
     return (
-        <div className="container vh-100">
-            <div className="d-flex flex-column flex-md-row justify-content-center align-items-center h-100 text-center text-md-start">
+        <div className="container h-screen">
+            <div className="flex flex-col md:flex-row justify-center items-center h-full text-center md:text-left">
 
                 {/* Titolo: margin-bottom su mobile, margin-right su desktop */}
-                <h1 className="text-uppercase Aktiv-Grotesk-Black mb-4 mb-md-0 me-md-4"
+                <h1 className="uppercase Aktiv-Grotesk-Black mb-4 md:mb-0 md:mr-4"
                     style={{ fontSize: "clamp(60px, 8vw, 75px)" }}>
                     come lavoro
                 </h1>
 
                 {/* Gruppo GIF con parentesi */}
-                <div className="d-flex align-items-center justify-content-center p-4">
-                    <h1 className="text-uppercase Aktiv-Grotesk-Black m-0 p-0"
+                <div className="flex items-center justify-center p-4">
+                    <h1 className="uppercase Aktiv-Grotesk-Black m-0 p-0"
                         style={{ fontSize: "clamp(40px, 8vw, 70px)" }}>(</h1>
 
                     <img
                         src={imgMethods}
                         alt=""
-                        className="img-fluid"
-                        style={{ maxWidth: "600px", width: "100%" }}
+                        className="w-full h-auto"
+                        style={{ maxWidth: "600px" }}
                     />
 
-                    <h1 className="text-uppercase Aktiv-Grotesk-Black m-0 p-0"
+                    <h1 className="uppercase Aktiv-Grotesk-Black m-0 p-0"
                         style={{ fontSize: "clamp(40px, 8vw, 75px)" }}>)</h1>
                 </div>
 

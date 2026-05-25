@@ -6,20 +6,27 @@ const Footer = () => {
         <>
             <div id="contact" className="container p-3">
                 {/* Su mobile in colonna e centrato, su desktop in riga con spazio tra gli elementi */}
-                <div className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 gap-md-0">
-                    <p className="m-0 text-uppercase Aktiv-Grotesk-Black">sara molino</p>
-                    <motion.a href="mailto:saramolino35@gmail.com<" className="m-0 Aktiv-Grotesk-Light text-dark" style={{ fontWeight: 300, willChange: "font-weight" }}// Suggerisce al browser di ottimizzare l'animazione di questa proprietà
-                                    whileHover={{ fontWeight: 700, y: -5, rotate: 2  }}
-                                    whileTap={{ scale: 0.95 }}>saramolino35@gmail.com</motion.a>
+                <div className="flex flex-col md:flex-row justify-between items-center gap-3 md:gap-0">
+                    <p className="m-0 uppercase Aktiv-Grotesk-Black">sara molino</p>
 
-                    <div className="d-flex justify-content-between align-items-center gap-3 fs-4">
-                        <motion.a href="https://www.instagram.com/salefino.sm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="text-dark text-decoration-none" target="_blank" rel="noopener noreferrer" whileHover={{ y: -5, rotate: 5 }}whileTap={{ scale: 0.9 }}><i className="fa-brands fa-instagram"></i></motion.a>
-                        <motion.a href="https://www.linkedin.com/in/sara-molino-6604882b3/" className="text-dark text-decoration-none" target="_blank" rel="noopener noreferrer" whileHover={{ y: -5, rotate: 5 }} whileTap={{ scale: 0.9 }}><i className="fa-brands fa-linkedin-in"></i></motion.a>
+                    <motion.a
+                        href="mailto:saramolino35@gmail.com"
+                        className="m-0 Aktiv-Grotesk-Light text-black"
+                        style={{ fontWeight: 300, willChange: "font-weight" }} // Suggerisce al browser di ottimizzare l'animazione di questa proprietà
+                        whileHover={{ fontWeight: 700, y: -5, rotate: 2 }}
+                        whileTap={{ scale: 0.95 }}
+                    >
+                        saramolino35@gmail.com
+                    </motion.a>
+
+                    <div className="flex justify-between items-center gap-3 text-xl">
+                        <motion.a href="https://www.instagram.com/salefino.sm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="text-black no-underline" target="_blank" rel="noopener noreferrer" whileHover={{ y: -5, rotate: 5 }} whileTap={{ scale: 0.9 }}><i className="fa-brands fa-instagram"></i></motion.a>
+                        <motion.a href="https://www.linkedin.com/in/sara-molino-6604882b3/" className="text-black no-underline" target="_blank" rel="noopener noreferrer" whileHover={{ y: -5, rotate: 5 }} whileTap={{ scale: 0.9 }}><i className="fa-brands fa-linkedin-in"></i></motion.a>
                     </div>
                 </div>
 
                 {/* Testo finale centrato su mobile per estetica, mantenuto normale su desktop */}
-                <motion.a href="#" className="Aktiv-Grotesk-Light text-dark text-center text-md-start mt-3 mt-md-2">
+                <motion.a href="#" className="Aktiv-Grotesk-Light text-black md:text-left mt-3 md:mt-2 block">
                     Twinkle twinkle little design, how I wonder what you'll shine! Up above the page so high, ideas sparkling in my eye.
                 </motion.a>
             </div>

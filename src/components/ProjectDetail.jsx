@@ -11,74 +11,74 @@ const ProjectDetail = () => {
     const [open, setOpen] = useState(false);
 
     if (!project) {
-        return <div className="container py-5"><h1>Progetto non trovato</h1></div>;
+        return <div className="container py-12"><h1>Progetto non trovato</h1></div>;
     }
 
     return (
-        <div className="py-5" style={{ marginTop: "80px" }}>
-            <div className="d-flex flex-column-reverse flex-md-row">
+        <div className="py-12" style={{ marginTop: "80px" }}>
+            <div className="flex flex-col-reverse md:flex-row">
 
                 {/* COLONNA IMMAGINI */}
-                <div className="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center">
+                <div className="w-full md:w-1/2 flex flex-col items-center justify-center">
                     {project.video && (
-                        <div className="img-size-project-desktop img-size-project-mobile mb-5">
+                        <div className="img-size-project-desktop img-size-project-mobile mb-12">
                             <video
                                 src={project.video}
                                 autoPlay
                                 loop
                                 playsInline
-                                className="object-fit-cover h-100 w-100">
+                                className="object-cover h-full w-full">
                             </video>
                         </div>
                     )}
 
                     {project.gallery && project.gallery.map((img, index) => (
-                        <div key={index} className="img-size-project-desktop img-size-project-mobile mb-5">
+                        <div key={index} className="img-size-project-desktop img-size-project-mobile mb-12">
                             <img
                                 src={img}
                                 alt={`${project.name} - ${index}`}
-                                className="object-fit-cover h-100 w-100"
+                                className="object-cover h-full w-full"
                             />
                         </div>
                     ))}
                 </div>
 
                 {/* COLONNA TESTO */}
-                <div className="col-12 col-md-6 mb-5 mb-md-0 padding-text-desktop padding-text-mobile">
-                    <div className="sticky-md-top" style={{ top: "120px", zIndex: 10 }}>
-                        <h1 className="Aktiv-Grotesk-Black text-uppercase m-0 p-0 fs-1">
+                <div className="w-full md:w-1/2 mb-12 md:mb-0 padding-text-desktop padding-text-mobile">
+                    <div className="md:sticky" style={{ top: "120px", zIndex: 10 }}>
+                        <h1 className="Aktiv-Grotesk-Black uppercase m-0 p-0 text-4xl md:text-5xl">
                             {project.title}
                         </h1>
-                        <h2 className="Aktiv-Grotesk-RegularItalic m-0 p-0 fs-4">
+                        <h2 className="Aktiv-Grotesk-RegularItalic m-0 p-0 text-xl">
                             {project.subtitle}
                         </h2>
-                        <p className="mt-4 Aktiv-Grotesk-Light fs-5">
+                        <p className="mt-4 Aktiv-Grotesk-Light text-xl">
                             {project.description1}
                         </p>
-                        <p className="mt-4 Aktiv-Grotesk-Light fs-5">
+                        <p className="mt-4 Aktiv-Grotesk-Light text-xl">
                             {project.description2}
                         </p>
-                        <p className="mt-4 Aktiv-Grotesk-Light fs-5">
+                        <p className="mt-4 Aktiv-Grotesk-Light text-xl">
                             {project.description3}
                         </p>
 
-                        {/* BOTTONE A CASCATA */}
-                        {/* <div className="stats-wrapper mt-4 bg-dark text-white">
+                        {/* BOTTONE A CASCATA (Classi convertite pronte all'uso) */}
+                        {/* <div className="stats-wrapper mt-4 bg-black text-white">
                             <Button
                                 onClick={() => setOpen(!open)}
                                 aria-controls="stats-collapse-text"
                                 aria-expanded={open}
                                 variant="link"
-                                className="p-2 text-decoration-none Aktiv-Grotesk-Black text-white fs-5 d-flex align-items-center"
+                                className="p-2 no-underline Aktiv-Grotesk-Black text-white text-xl flex items-center"
                             >
-                                <h1 className="Aktiv-Grotesk-Black fs-3 ms-2 my-0 p-0">{open ? 'I RISULTATI' : 'I RISULTATI'}</h1>
+                                <h1 className="Aktiv-Grotesk-Black text-3xl ml-2 my-0 p-0">{open ? 'I RISULTATI' : 'I RISULTATI'}</h1>
                                 <span style={{
                                     transform: open ? 'rotate(180deg)' : 'rotate(0deg)',
                                     transition: 'transform 0.3s ease',
                                     display: 'inline-block',
                                     marginLeft: '10px'
                                 }}>
-                                    <i class="fa-solid fa-angle-down fs-2"></i>
+                                    <i className="fa-solid fa-angle-down text-4xl"></i>
                                 </span>
                             </Button>
 
@@ -86,19 +86,19 @@ const ProjectDetail = () => {
                                 <div id="stats-collapse-text">
                                     <div className="stats-container py-2 px-3">
                                         {project.interazioni && (
-                                            <p className="Aktiv-Grotesk-Black fs-2 mb-1 pt-2">
+                                            <p className="Aktiv-Grotesk-Black text-3xl mb-1 pt-2">
                                                 {project.interazioni}
                                                 {project.time && (
-                                                    <span className="Aktiv-Grotesk-Regular fs-4"> {project.time}</span>
+                                                    <span className="Aktiv-Grotesk-Regular text-xl"> {project.time}</span>
                                                 )}
                                             </p>
                                         )}
 
                                         {project.visualizzazioni && (
-                                            <p className="Aktiv-Grotesk-Black fs-2">
+                                            <p className="Aktiv-Grotesk-Black text-3xl">
                                                 {project.visualizzazioni}
                                                 {project.time && (
-                                                    <span className="Aktiv-Grotesk-Regular fs-4"> {project.time}</span>
+                                                    <span className="Aktiv-Grotesk-Regular text-xl"> {project.time}</span>
                                                 )}
                                             </p>
                                         )}

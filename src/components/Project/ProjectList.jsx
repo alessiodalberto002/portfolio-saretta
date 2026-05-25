@@ -5,14 +5,16 @@ import { section } from "framer-motion/client";
 const ProjectList = () => {
     return (
         <section id="portfolio">
-            <div className="container d-flex flex-column justify-content-center bg-white padding-desktop padding-mobile" style={{ padding: "150px 0" }}>
+            <div className="container min-h-screen flex flex-col items-center justify-content-center bg-white padding-desktop padding-mobile">
                 <div className="mx-auto" style={{ width: '100%' }}>
-                    <h1 className="text-center text-uppercase mb-5 Aktiv-Grotesk-Black" style={{ fontSize: "50px" }}>
+                    <h1 className="text-center uppercase mb-5 Aktiv-Grotesk-Black" style={{ fontSize: "50px" }}>
                         work
                     </h1>
-                    <div className="row row-cols-1 row-cols-md-4 g-2">
+                    
+                    {/* Sostituito il sistema row/col di Bootstrap con CSS Grid di Tailwind */}
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-2">
                         {projectsData.map((project) => (
-                            <div key={project.id} className="col">
+                            <div key={project.id}>
                                 <SingleProject
                                     id={project.id}
                                     image={project.image_cop}

@@ -28,37 +28,37 @@ const About = () => {
     };
 
     return (
-        <section id="about" className="min-vh-100 w-100" style={{ padding: "150px 0" }}>
+        <section id="about" className="min-h-screen w-full" style={{ padding: "150px 0" }}>
 
             {/* SEZIONE DESKTOP */}
             <motion.div
-                className="d-none d-md-block h-100"
+                className="hidden md:block h-full"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
                 // RIMOSSO once: true -> L'animazione si ripete ogni volta che entri/esci
                 viewport={{ margin: "-15%" }}
             >
-                <div className="d-flex flex-column justify-content-center align-items-center h-100">
+                <div className="flex flex-col justify-center items-center h-full">
                     <motion.h1
                         variants={itemVariants}
-                        className="text-uppercase mb-5 text-center Aktiv-Grotesk-Black"
+                        className="uppercase mb-5 text-center Aktiv-Grotesk-Black"
                         style={{ fontSize: "50px" }}
                     >
                         about me
                     </motion.h1>
 
-                    <div className="d-flex align-items-center justify-content-center gap-5">
+                    <div className="flex items-center justify-center gap-12">
                         <motion.img
                             variants={itemVariants}
-                            className="w-25"
+                            className="w-1/4"
                             src={aboutImg}
                             alt="Profile"
                         />
 
                         <motion.div
                             variants={itemVariants}
-                            className="w-25 Aktiv-Grotesk-Light"
+                            className="w-1/4 Aktiv-Grotesk-Light"
                             style={{ fontSize: "20px" }}
                         >
                             <p>
@@ -71,22 +71,22 @@ const About = () => {
                                 È qui che per me inizia davvero il processo creativo.<br /><br />
                                 Ora che hai letto di me, puoi
                                 <motion.a href="https://www.linkedin.com/in/sara-molino-6604882b3/" target="_blank"
-                                    className="mx-1 text-decoration-underline text-dark d-inline-block transition-all"
+                                    className="mx-1 underline text-black inline-block transition-all"
                                     style={{ fontWeight: 300, willChange: "font-weight" }}
                                     whileHover={{ fontWeight: 700 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
                                     giudicarmi,
                                 </motion.a>
-                                <motion.a href="mailto:saramolino35@gmail.com" className=" mx-1 text-decoration-underline text-dark"
+                                <motion.a href="mailto:saramolino35@gmail.com" className="mx-1 underline text-black"
                                     style={{ fontWeight: 300, willChange: "font-weight" }}
                                     whileHover={{ fontWeight: 700 }}
                                     whileTap={{ scale: 0.95 }}>scrivermi,</motion.a>
-                                <motion.a href="https://www.instagram.com/salefino.sm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" className=" mx-1 text-decoration-underline  text-dark" style={{ fontWeight: 300, willChange: "font-weight" }}
+                                <motion.a href="https://www.instagram.com/salefino.sm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" className="mx-1 underline text-black" style={{ fontWeight: 300, willChange: "font-weight" }}
                                     whileHover={{ fontWeight: 700 }}
                                     whileTap={{ scale: 0.95 }}>seguirmi</motion.a>
                                 o <motion.span
-                                    className="text-decoration-underline ms-1"
+                                    className="underline ml-1"
                                     initial={{ color: "#000000", fontWeight: 300 }}
                                     style={{ willChange: "font-weight, color", cursor: "pointer" }}
                                     whileHover={{ fontWeight: 700, color: "#FF0000" }}
@@ -104,17 +104,17 @@ const About = () => {
 
             {/* SEZIONE MOBILE */}
             <motion.div
-                className="d-block d-md-none px-3"
+                className="block md:hidden px-3"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
                 // RIMOSSO once: true -> L'animazione si ripete ogni volta che entri/esci
                 viewport={{ margin: "-10%" }}
             >
-                <div className="d-flex flex-column align-items-center">
+                <div className="flex flex-col items-center">
                     <motion.h1
                         variants={itemVariants}
-                        className="text-uppercase mb-4 text-center Aktiv-Grotesk-Black"
+                        className="uppercase mb-4 text-center Aktiv-Grotesk-Black"
                         style={{ fontSize: "clamp(35px, 8vw, 50px)" }}
                     >
                         about me
@@ -122,7 +122,7 @@ const About = () => {
 
                     <motion.img
                         variants={itemVariants}
-                        className="w-75 mb-4"
+                        className="w-3/4 mb-4"
                         src={aboutImg}
                         alt="Profile"
                     />
@@ -142,22 +142,22 @@ const About = () => {
                             È qui che per me inizia davvero il processo creativo.<br /><br />
                             Ora che hai letto di me, puoi
                             <motion.a href="https://www.linkedin.com/in/sara-molino-6604882b3/" target="_blank"
-                                className="mx-1 text-decoration-underline text-dark d-inline-block transition-all"
+                                className="mx-1 underline text-black inline-block transition-all"
                                 style={{ fontWeight: 300, willChange: "font-weight" }}
                                 whileHover={{ fontWeight: 700 }}
                                 whileTap={{ scale: 0.95 }}
                             >
                                 giudicarmi,
                             </motion.a>
-                            <motion.a href="mailto:saramolino35@gmail.com" className=" mx-1 text-decoration-underline text-dark"
+                            <motion.a href="mailto:saramolino35@gmail.com" className="mx-1 underline text-black"
                                 style={{ fontWeight: 300, willChange: "font-weight" }}
                                 whileHover={{ fontWeight: 700 }}
                                 whileTap={{ scale: 0.95 }}>scrivermi,</motion.a>
-                            <motion.a href="https://www.instagram.com/salefino.sm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" className=" mx-1 text-decoration-underline  text-dark" style={{ fontWeight: 300, willChange: "font-weight" }}
-                                whileHover={{ fontWeight: 700 }}
-                                whileTap={{ scale: 0.95 }}>seguirmi</motion.a>
+                            <motion.a href="https://www.instagram.com/salefino.sm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" className="mx-1 underline text-black" style={{ fontWeight: 300, willChange: "font-weight" }}
+                                    whileHover={{ fontWeight: 700 }}
+                                    whileTap={{ scale: 0.95 }}>seguirmi</motion.a>
                             o <motion.span
-                                className="text-decoration-underline ms-1"
+                                className="underline ml-1"
                                 initial={{ color: "#000000", fontWeight: 300 }}
                                 style={{ willChange: "font-weight, color", cursor: "pointer" }}
                                 whileHover={{ fontWeight: 700, color: "#FF0000" }}
@@ -172,15 +172,15 @@ const About = () => {
                 </div>
             </motion.div>
 
-            {/* MODAL UNICO */}
+            {/* MODAL UNICO (Classi interne convertite a Tailwind) */}
             <Modal show={showBlock} onHide={() => setShowBlock(false)} centered>
-                <div className="p-5 text-center bg-white rounded-5 border-0">
-                    <h2 className="Aktiv-Grotesk-Black mb-3">Aspetta! 🛑</h2>
-                    <p className="Aktiv-Grotesk-Light fs-5">
+                <div className="p-12 text-center bg-white rounded-[2rem] border-0">
+                    <h2 className="Aktiv-Grotesk-Black mb-3 text-3xl">Aspetta! 🛑</h2>
+                    <p className="Aktiv-Grotesk-Light text-xl">
                         Perché vuoi bloccarmi? Sono i font troppo grandi o è la mia ossessione per l'uncinetto? Ps: se mi blocchi mi offendo (forse).
                     </p>
                     <button
-                        className="btn btn-dark mt-4 px-4 rounded-pill shadow-sm"
+                        className="bg-black text-white mt-4 px-6 py-2 rounded-full shadow-sm hover:bg-zinc-800 transition-colors"
                         onClick={() => setShowBlock(false)}
                     >
                         Ok, ti do un'altra chance

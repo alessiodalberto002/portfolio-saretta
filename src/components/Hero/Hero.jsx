@@ -62,9 +62,6 @@ const Hero = () => {
     ];
 
     // DEFINIZIONE DELLA POSIZIONE E DIMENSIONE DEL POST-IT/GATTINO
-    // Usiamo una variabile separata per non mischiare con gli altri box,
-    // o puoi anche aggiungerlo come un nuovo oggetto `box` all'array `boxes` se preferisci.
-    // L'ho posizionato 'a caso' nell'angolo in basso a destra.
     const stickyNoteBox = {
         d: { w: '180px', h: '180px', bottom: '15%', right: '10%' },
         m: { w: '120px', h: '120px', bottom: '10%', right: '5%' },
@@ -73,7 +70,7 @@ const Hero = () => {
     };
 
     return (
-        <section className="vw-100 vh-100 bg-white d-flex align-items-center justify-content-center position-relative">
+        <section className="w-screen h-screen bg-white flex items-center justify-center relative">
 
             {boxes.map((box) => (
                 <motion.div
@@ -88,7 +85,7 @@ const Hero = () => {
                         opacity: { delay: box.delay, duration: 1 },
                         y: { duration: box.dur, repeat: Infinity, ease: "easeInOut", delay: box.delay }
                     }}
-                    className={`position-absolute ${!box.isMobile ? 'd-none d-lg-block' : 'd-block'}`}
+                    className={`absolute ${!box.isMobile ? 'hidden lg:block' : 'block'}`}
                     style={{
                         zIndex: 1,
                         overflow: 'hidden',
@@ -103,17 +100,17 @@ const Hero = () => {
                     {/* <img
                         src={box.img}
                         alt="Project"
-                        className="w-100 h-100 object-fit-cover"
+                        className="w-full h-full object-cover"
                     /> */}
                 </motion.div>
             ))}
 
             {/* TESTO CENTRALE */}
-            <div className="container-fluid text-center position-relative" style={{ zIndex: 10 }}>
+            <div className="w-full text-center relative" style={{ zIndex: 10 }}>
                 <motion.h1
                     initial="hidden"
                     animate="visible"
-                    className="fw-light text-dark tracking-tight m-0 text-uppercase"
+                    className="font-light text-black tracking-tight m-0 uppercase"
                     style={{
                         letterSpacing: '-0.05em',
                         fontSize: isMobile ? '2.8rem' : 'calc(2rem + 5vw)',
@@ -125,7 +122,7 @@ const Hero = () => {
                             key={index}
                             variants={{ hidden: { opacity: 0, y: 15 }, visible: { opacity: 1, y: 0 } }}
                             transition={{ delay: index * 0.05 + 0.5, duration: 0.8, ease: "circOut" }}
-                            className="d-inline-block"
+                            className="inline-block"
                             style={{ whiteSpace: char === " " ? "pre" : "normal" }}
                         >
                             {char}
@@ -134,49 +131,46 @@ const Hero = () => {
                 </motion.h1>
             </div>
 
-            {/* SEZIONE POST-IT / GATTINO */}
-            <motion.div
+            {/* POST-IT & KITTY (DECOMMENTALO SE TI SERVE) */}
+            {/* <motion.div
                 initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
                 animate={{
                     opacity: 1,
                     scale: 1,
-                    rotate: 0, // Si raddrizza quando appare
+                    rotate: 0,
                     y: isMobile ? [0, -5, 0] : [0, -10, 0],
                 }}
-                className="position-absolute"
+                className="absolute"
                 style={{
-                    zIndex: 15, // Un po' più alto degli altri box
+                    zIndex: 15,
                     overflow: 'hidden',
-                    borderRadius: '2px', // Manteniamo lo stile
-                    cursor: 'pointer', // Indica che è cliccabile
+                    borderRadius: '2px',
+                    cursor: 'pointer',
                     width: isMobile ? stickyNoteBox.m.w : stickyNoteBox.d.w,
                     height: isMobile ? stickyNoteBox.m.h : stickyNoteBox.d.h,
                     bottom: isMobile ? stickyNoteBox.m.bottom : stickyNoteBox.d.bottom,
                     right: isMobile ? stickyNoteBox.m.right : stickyNoteBox.d.right,
                 }}
-                onClick={() => setShowKitty(!showKitty)} // CAMBIA LO STATO AL CLICK
+                onClick={() => setShowKitty(!showKitty)} 
             >
-                {/* Usiamo AnimatePresence per animare la transizione tra post-it e gattino */}
                 <AnimatePresence mode="wait">
                     {!showKitty ? (
-                        // MOSTRA IL POST-IT
                         <motion.img
                             key="postit"
-                            src={postItImg} // Usa l'immagine segnaposto o locale
+                            src={postItImg}
                             alt="Post-it note"
-                            className="w-100 h-100 object-fit-cover"
+                            className="w-full h-full object-cover"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.3 }}
                         />
                     ) : (
-                        // MOSTRA IL GATTINO
                         <motion.img
                             key="kitty"
-                            src={kittyMemeImg} // Usa l'immagine segnaposto o locale
+                            src={kittyMemeImg}
                             alt="Funny cat meme"
-                            className="w-100 h-100 object-fit-cover"
+                            className="w-full h-full object-cover"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
@@ -184,28 +178,28 @@ const Hero = () => {
                         />
                     )}
                 </AnimatePresence>
-            </motion.div>
+            </motion.div> */}
 
             {/* SCROLL INDICATOR - Rinforzato per visibilità mobile */}
-            <motion.div
+            {/* <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 2.5 }}
-                className="position-absolute bottom-0 start-50 translate-middle-x mt-5"
+                className="absolute bottom-0 left-1/2 -translate-x-1/2 mt-5"
                 style={{ zIndex: 20 }}
             >
-                <div className="d-flex flex-column align-items-center">
-                    <div className="bg-dark" style={{ width: '2px', height: '50px', opacity: 0.2 }} />
-                    <div className="position-absolute top-0 w-100" style={{ height: '50px', overflow: 'hidden' }}>
+                <div className="flex flex-col items-center">
+                    <div className="bg-black" style={{ width: '2px', height: '50px', opacity: 0.2 }} />
+                    <div className="absolute top-0 w-full" style={{ height: '50px', overflow: 'hidden' }}>
                         <motion.div
                             animate={{ y: [-50, 50] }}
                             transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
-                            className="bg-dark mx-auto"
+                            className="bg-black mx-auto"
                             style={{ width: '2px', height: '100%' }}
                         />
                     </div>
                 </div>
-            </motion.div>
+            </motion.div> */}
         </section>
     );
 };
