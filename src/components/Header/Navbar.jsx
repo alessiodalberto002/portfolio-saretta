@@ -96,7 +96,7 @@ const Navbar = ({ links }) => {
                                 <a
                                     href={item.path}
                                     onClick={(e) => setIsOpen(false)}
-                                    className="Aktiv-Grotesk-Black inline-block text-white uppercase no-underline"
+                                    className="Aktiv-Grotesk-Black inline-block text-white uppercase text-decoration-none"
                                     style={{
                                         fontSize: '2.5rem',
                                         letterSpacing: '2px',
