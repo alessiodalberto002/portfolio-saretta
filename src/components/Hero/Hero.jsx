@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
-// Import immagini
+// Import immagini originali
 import copScalo from "../../assets/img/scalo/14_luglio_copertina.jpg"
 import copAmami from "../../assets/img/amami/02.png"
 import imgScalo3 from "../../assets/img/scalo/03_ottobre.png"
@@ -9,10 +9,16 @@ import imgAmami1 from "../../assets/img/amami/01.png"
 import imgAmami2 from "../../assets/img/amami/02.png"
 import img7p1 from "../../assets/img/7p/01.png"
 import img7p2 from "../../assets/img/7p/02 (1).png"
+import postItImg from "../../assets/img/8915878.png"
+import kittyMemeImg from "../../assets/img/miao.jpg"
 
 const Hero = () => {
     const text = "think, create";
     const [isMobile, setIsMobile] = useState(false);
+
+    // STATO PER IL POST-IT E IL GATTINO
+    // Controlla se mostrare il gattino (true) o il post-it (false)
+    const [showKitty, setShowKitty] = useState(false);
 
     useEffect(() => {
         const checkMobile = () => setIsMobile(window.innerWidth < 992);
@@ -55,6 +61,17 @@ const Hero = () => {
         { id: 6, img: img7p2, isMobile: false, d: { w: '240px', h: '320px', top: '68%', left: '28%' }, delay: 0.4, dur: 4.2 },
     ];
 
+    // DEFINIZIONE DELLA POSIZIONE E DIMENSIONE DEL POST-IT/GATTINO
+    // Usiamo una variabile separata per non mischiare con gli altri box,
+    // o puoi anche aggiungerlo come un nuovo oggetto `box` all'array `boxes` se preferisci.
+    // L'ho posizionato 'a caso' nell'angolo in basso a destra.
+    const stickyNoteBox = {
+        d: { w: '180px', h: '180px', bottom: '15%', right: '10%' },
+        m: { w: '120px', h: '120px', bottom: '10%', right: '5%' },
+        delay: 2.0, // Un po' dopo gli altri
+        dur: 3.5 // Un po' più veloce
+    };
+
     return (
         <section className="vw-100 vh-100 bg-white d-flex align-items-center justify-content-center position-relative">
 
@@ -82,11 +99,12 @@ const Hero = () => {
                         left: isMobile && box.isMobile ? box.m.left : box.d.left,
                     }}
                 >
-                    <img
+                    {/* CODICE ORIGINALE DELL'IMMAGINE, DECOMMENTALO QUANDO HAI LE IMMAGINI */}
+                    {/* <img
                         src={box.img}
                         alt="Project"
                         className="w-100 h-100 object-fit-cover"
-                    />
+                    /> */}
                 </motion.div>
             ))}
 
@@ -115,6 +133,58 @@ const Hero = () => {
                     ))}
                 </motion.h1>
             </div>
+
+            {/* SEZIONE POST-IT / GATTINO */}
+            <motion.div
+                initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
+                animate={{
+                    opacity: 1,
+                    scale: 1,
+                    rotate: 0, // Si raddrizza quando appare
+                    y: isMobile ? [0, -5, 0] : [0, -10, 0],
+                }}
+                className="position-absolute"
+                style={{
+                    zIndex: 15, // Un po' più alto degli altri box
+                    overflow: 'hidden',
+                    borderRadius: '2px', // Manteniamo lo stile
+                    cursor: 'pointer', // Indica che è cliccabile
+                    width: isMobile ? stickyNoteBox.m.w : stickyNoteBox.d.w,
+                    height: isMobile ? stickyNoteBox.m.h : stickyNoteBox.d.h,
+                    bottom: isMobile ? stickyNoteBox.m.bottom : stickyNoteBox.d.bottom,
+                    right: isMobile ? stickyNoteBox.m.right : stickyNoteBox.d.right,
+                }}
+                onClick={() => setShowKitty(!showKitty)} // CAMBIA LO STATO AL CLICK
+            >
+                {/* Usiamo AnimatePresence per animare la transizione tra post-it e gattino */}
+                <AnimatePresence mode="wait">
+                    {!showKitty ? (
+                        // MOSTRA IL POST-IT
+                        <motion.img
+                            key="postit"
+                            src={postItImg} // Usa l'immagine segnaposto o locale
+                            alt="Post-it note"
+                            className="w-100 h-100 object-fit-cover"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                        />
+                    ) : (
+                        // MOSTRA IL GATTINO
+                        <motion.img
+                            key="kitty"
+                            src={kittyMemeImg} // Usa l'immagine segnaposto o locale
+                            alt="Funny cat meme"
+                            className="w-100 h-100 object-fit-cover"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                        />
+                    )}
+                </AnimatePresence>
+            </motion.div>
 
             {/* SCROLL INDICATOR - Rinforzato per visibilità mobile */}
             <motion.div

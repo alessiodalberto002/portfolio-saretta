@@ -6,6 +6,7 @@ import imgScalo1 from "../assets/img/scalo/11_luglio.png"
 import imgScalo2 from "../assets/img/scalo/26_giugno.png"
 import imgScalo3 from "../assets/img/scalo/03_ottobre.png"
 import imgScalo4 from "../assets/img/scalo/10_ottobre.png"
+import imgScalo5 from "../assets/img/scalo/02_febbraio.png"
 import videoAmami from "../assets/img/amami/01_reel_AMAMI.mp4"
 import imgAmami1 from "../assets/img/amami/01.png"
 import imgAmami2 from "../assets/img/amami/02.png"
@@ -38,6 +39,7 @@ export const projectsData = [
             imgScalo2,
             imgScalo3,
             imgScalo4,
+            imgScalo5,
         ]
     },
     {

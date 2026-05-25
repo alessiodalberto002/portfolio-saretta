@@ -1,26 +1,66 @@
-import React, { useState } from 'react'; // <--- MANCAVA QUESTO
+import React, { useState } from 'react';
 import aboutImg from "../../assets/img/dolcina.gif";
 import { Modal } from 'react-bootstrap';
 import { motion } from "framer-motion";
 
 const About = () => {
-    // 1. Definiamo lo stato per il Modal
     const [showBlock, setShowBlock] = useState(false);
+
+    // Varianti per il contenitore principale (staggering)
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.15, // Un po' più veloce per rendere fluido il continuo scroll
+            }
+        }
+    };
+
+    // Varianti per i singoli elementi
+    const itemVariants = {
+        hidden: { opacity: 0, y: 30 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.5, ease: "easeOut" }
+        }
+    };
 
     return (
         <section id="about" className="min-vh-100 w-100" style={{ padding: "150px 0" }}>
 
             {/* SEZIONE DESKTOP */}
-            <div className="d-none d-md-block h-100">
+            <motion.div
+                className="d-none d-md-block h-100"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                // RIMOSSO once: true -> L'animazione si ripete ogni volta che entri/esci
+                viewport={{ margin: "-15%" }}
+            >
                 <div className="d-flex flex-column justify-content-center align-items-center h-100">
-                    <h1 className="text-uppercase mb-5 text-center Aktiv-Grotesk-Black" style={{ fontSize: "50px" }}>
+                    <motion.h1
+                        variants={itemVariants}
+                        className="text-uppercase mb-5 text-center Aktiv-Grotesk-Black"
+                        style={{ fontSize: "50px" }}
+                    >
                         about me
-                    </h1>
+                    </motion.h1>
 
                     <div className="d-flex align-items-center justify-content-center gap-5">
-                        <img className="w-25" src={aboutImg} alt="Profile" />
+                        <motion.img
+                            variants={itemVariants}
+                            className="w-25"
+                            src={aboutImg}
+                            alt="Profile"
+                        />
 
-                        <div className="w-25 Aktiv-Grotesk-Light" style={{ fontSize: "20px" }}>
+                        <motion.div
+                            variants={itemVariants}
+                            className="w-25 Aktiv-Grotesk-Light"
+                            style={{ fontSize: "20px" }}
+                        >
                             <p>
                                 Fuori da Photoshop sono un costante work in progress, ma davanti a un pc so esattamente cosa fare.
                                 Mi nutro di caffè, intuizioni notturne e libri, forse troppi.
@@ -32,24 +72,24 @@ const About = () => {
                                 Ora che hai letto di me, puoi
                                 <motion.a href="https://www.linkedin.com/in/sara-molino-6604882b3/" target="_blank"
                                     className="mx-1 text-decoration-underline text-dark d-inline-block transition-all"
-                                    style={{ fontWeight: 300, willChange: "font-weight" }}// Suggerisce al browser di ottimizzare l'animazione di questa proprietà
+                                    style={{ fontWeight: 300, willChange: "font-weight" }}
                                     whileHover={{ fontWeight: 700 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
                                     giudicarmi,
                                 </motion.a>
                                 <motion.a href="mailto:saramolino35@gmail.com" className=" mx-1 text-decoration-underline text-dark"
-                                    style={{ fontWeight: 300, willChange: "font-weight" }}// Suggerisce al browser di ottimizzare l'animazione di questa proprietà
+                                    style={{ fontWeight: 300, willChange: "font-weight" }}
                                     whileHover={{ fontWeight: 700 }}
                                     whileTap={{ scale: 0.95 }}>scrivermi,</motion.a>
-                                <motion.a href="https://www.instagram.com/salefino.sm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" className=" mx-1 text-decoration-underline  text-dark" style={{ fontWeight: 300, willChange: "font-weight" }}// Suggerisce al browser di ottimizzare l'animazione di questa proprietà
+                                <motion.a href="https://www.instagram.com/salefino.sm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" className=" mx-1 text-decoration-underline  text-dark" style={{ fontWeight: 300, willChange: "font-weight" }}
                                     whileHover={{ fontWeight: 700 }}
                                     whileTap={{ scale: 0.95 }}>seguirmi</motion.a>
                                 o <motion.span
-                                    className="text-decoration-underline ms-1" // Riscattata la classe text-dark
-                                    initial={{ color: "#000000", fontWeight: 300 }} // Definiamo qui il colore di partenza
+                                    className="text-decoration-underline ms-1"
+                                    initial={{ color: "#000000", fontWeight: 300 }}
                                     style={{ willChange: "font-weight, color", cursor: "pointer" }}
-                                    whileHover={{ fontWeight: 700, color: "#FF0000" }} // Ora il rosso funzionerà alla perfezione
+                                    whileHover={{ fontWeight: 700, color: "#FF0000" }}
                                     whileTap={{ scale: 0.95 }}
                                     onClick={() => setShowBlock(true)}
                                 >
@@ -57,19 +97,41 @@ const About = () => {
                                 </motion.span>.
                             </p>
                             <p className="Aktiv-Grotesk-LightItalic mt-3">A te la scelta!</p>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
             {/* SEZIONE MOBILE */}
-            <div className="d-block d-md-none px-3">
+            <motion.div
+                className="d-block d-md-none px-3"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                // RIMOSSO once: true -> L'animazione si ripete ogni volta che entri/esci
+                viewport={{ margin: "-10%" }}
+            >
                 <div className="d-flex flex-column align-items-center">
-                    <h1 className="text-uppercase mb-4 text-center Aktiv-Grotesk-Black" style={{ fontSize: "clamp(35px, 8vw, 50px)" }}>
+                    <motion.h1
+                        variants={itemVariants}
+                        className="text-uppercase mb-4 text-center Aktiv-Grotesk-Black"
+                        style={{ fontSize: "clamp(35px, 8vw, 50px)" }}
+                    >
                         about me
-                    </h1>
-                    <img className="w-75 mb-4" src={aboutImg} alt="Profile" />
-                    <div className="Aktiv-Grotesk-Light text-center" style={{ fontSize: "clamp(16px, 4vw, 20px)" }}>
+                    </motion.h1>
+
+                    <motion.img
+                        variants={itemVariants}
+                        className="w-75 mb-4"
+                        src={aboutImg}
+                        alt="Profile"
+                    />
+
+                    <motion.div
+                        variants={itemVariants}
+                        className="Aktiv-Grotesk-Light text-center"
+                        style={{ fontSize: "clamp(16px, 4vw, 20px)" }}
+                    >
                         <p>
                             Fuori da Photoshop sono un costante work in progress, ma davanti a un pc so esattamente cosa fare.
                             Mi nutro di caffè, intuizioni notturne e libri, forse troppi.
@@ -81,24 +143,24 @@ const About = () => {
                             Ora che hai letto di me, puoi
                             <motion.a href="https://www.linkedin.com/in/sara-molino-6604882b3/" target="_blank"
                                 className="mx-1 text-decoration-underline text-dark d-inline-block transition-all"
-                                style={{ fontWeight: 300, willChange: "font-weight" }}// Suggerisce al browser di ottimizzare l'animazione di questa proprietà
+                                style={{ fontWeight: 300, willChange: "font-weight" }}
                                 whileHover={{ fontWeight: 700 }}
                                 whileTap={{ scale: 0.95 }}
                             >
                                 giudicarmi,
                             </motion.a>
                             <motion.a href="mailto:saramolino35@gmail.com" className=" mx-1 text-decoration-underline text-dark"
-                                style={{ fontWeight: 300, willChange: "font-weight" }}// Suggerisce al browser di ottimizzare l'animazione di questa proprietà
+                                style={{ fontWeight: 300, willChange: "font-weight" }}
                                 whileHover={{ fontWeight: 700 }}
                                 whileTap={{ scale: 0.95 }}>scrivermi,</motion.a>
-                            <motion.a href="https://www.instagram.com/salefino.sm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" className=" mx-1 text-decoration-underline  text-dark" style={{ fontWeight: 300, willChange: "font-weight" }}// Suggerisce al browser di ottimizzare l'animazione di questa proprietà
+                            <motion.a href="https://www.instagram.com/salefino.sm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" className=" mx-1 text-decoration-underline  text-dark" style={{ fontWeight: 300, willChange: "font-weight" }}
                                 whileHover={{ fontWeight: 700 }}
                                 whileTap={{ scale: 0.95 }}>seguirmi</motion.a>
                             o <motion.span
-                                className="text-decoration-underline ms-1" // Riscattata la classe text-dark
-                                initial={{ color: "#000000", fontWeight: 300 }} // Definiamo qui il colore di partenza
+                                className="text-decoration-underline ms-1"
+                                initial={{ color: "#000000", fontWeight: 300 }}
                                 style={{ willChange: "font-weight, color", cursor: "pointer" }}
-                                whileHover={{ fontWeight: 700, color: "#FF0000" }} // Ora il rosso funzionerà alla perfezione
+                                whileHover={{ fontWeight: 700, color: "#FF0000" }}
                                 whileTap={{ scale: 0.95 }}
                                 onClick={() => setShowBlock(true)}
                             >
@@ -106,11 +168,11 @@ const About = () => {
                             </motion.span>.
                         </p>
                         <p className="Aktiv-Grotesk-LightItalic mt-3">A te la scelta!</p>
-                    </div>
+                    </motion.div>
                 </div>
-            </div>
+            </motion.div>
 
-            {/* MODAL UNICO (Fuori dai div condizionali così non si duplica) */}
+            {/* MODAL UNICO */}
             <Modal show={showBlock} onHide={() => setShowBlock(false)} centered>
                 <div className="p-5 text-center bg-white rounded-5 border-0">
                     <h2 className="Aktiv-Grotesk-Black mb-3">Aspetta! 🛑</h2>

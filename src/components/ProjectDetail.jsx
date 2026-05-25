@@ -63,7 +63,7 @@ const ProjectDetail = () => {
                         </p>
 
                         {/* BOTTONE A CASCATA */}
-                        <div className="stats-wrapper mt-4 bg-dark text-white">
+                        {/* <div className="stats-wrapper mt-4 bg-dark text-white">
                             <Button
                                 onClick={() => setOpen(!open)}
                                 aria-controls="stats-collapse-text"
@@ -71,7 +71,6 @@ const ProjectDetail = () => {
                                 variant="link"
                                 className="p-2 text-decoration-none Aktiv-Grotesk-Black text-white fs-5 d-flex align-items-center"
                             >
-                                {/* Icona che ruota per dare l'idea di apertura */}
                                 <h1 className="Aktiv-Grotesk-Black fs-3 ms-2 my-0 p-0">{open ? 'I RISULTATI' : 'I RISULTATI'}</h1>
                                 <span style={{
                                     transform: open ? 'rotate(180deg)' : 'rotate(0deg)',
@@ -85,7 +84,6 @@ const ProjectDetail = () => {
 
                             <Collapse in={open}>
                                 <div id="stats-collapse-text">
-                                    {/* Rimuovo mt-4 qui per farlo sembrare attaccato al bottone */}
                                     <div className="stats-container py-2 px-3">
                                         {project.interazioni && (
                                             <p className="Aktiv-Grotesk-Black fs-2 mb-1 pt-2">
@@ -107,7 +105,7 @@ const ProjectDetail = () => {
                                     </div>
                                 </div>
                             </Collapse>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
