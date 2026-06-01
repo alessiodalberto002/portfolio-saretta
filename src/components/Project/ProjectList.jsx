@@ -8,7 +8,7 @@ const ProjectList = () => {
             <div className="container min-h-screen flex flex-col items-center justify-content-center bg-white padding-desktop padding-mobile">
                 <div className="mx-auto" style={{ width: '100%' }}>
                     <h1 className="text-center uppercase mb-5 Aktiv-Grotesk-Black" style={{ fontSize: "50px" }}>
-                        work
+                        portfolio
                     </h1>
                     
                     {/* Sostituito il sistema row/col di Bootstrap con CSS Grid di Tailwind */}

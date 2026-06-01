@@ -52,13 +52,13 @@ const ProjectDetail = () => {
                         <h2 className="Aktiv-Grotesk-RegularItalic m-0 p-0 text-xl">
                             {project.subtitle}
                         </h2>
-                        <p className="mt-4 Aktiv-Grotesk-Light text-xl">
+                        <p className="mt-4 Aktiv-Grotesk-Light text-[18px]">
                             {project.description1}
                         </p>
-                        <p className="mt-4 Aktiv-Grotesk-Light text-xl">
+                        <p className="mt-4 Aktiv-Grotesk-Light text-[18px]">
                             {project.description2}
                         </p>
-                        <p className="mt-4 Aktiv-Grotesk-Light text-xl">
+                        <p className="mt-4 Aktiv-Grotesk-Light text-[18px]">
                             {project.description3}
                         </p>
 

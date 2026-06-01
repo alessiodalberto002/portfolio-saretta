@@ -54,7 +54,7 @@ const Navbar = ({ links }) => {
                     {/* Desktop Menu */}
                     <ul className="hidden md:flex m-0 p-0 list-none">
                         {links.map((item) => (
-                            <li key={item.id} className="mr-8 Aktiv-Grotesk-Regular">
+                            <li key={item.id} className="mr-8 Aktiv-Grotesk-Regular hover:underline hover:underline-offset-4 transition-all">
                                 <a href={item.path} className="text-black text-xl text-decoration-none">
                                     {item.linkName}
                                 </a>

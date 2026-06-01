@@ -121,7 +121,7 @@ const Hero = () => {
                         <motion.span
                             key={index}
                             variants={{ hidden: { opacity: 0, y: 15 }, visible: { opacity: 1, y: 0 } }}
-                            transition={{ delay: index * 0.05 + 0.5, duration: 0.8, ease: "circOut" }}
+                            transition={{ delay: index * 0.05 + 0.05, duration: 0.8, ease: "circOut" }}
                             className="inline-block"
                             style={{ whiteSpace: char === " " ? "pre" : "normal" }}
                         >

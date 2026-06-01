@@ -35,11 +35,11 @@ export const projectsData = [
         image_cop: copScalo,
         video: videoScalo,
         gallery: [
-            imgScalo1,
             imgScalo2,
+            imgScalo1,
             imgScalo3,
-            imgScalo4,
             imgScalo5,
+            imgScalo4,
         ]
     },
     {

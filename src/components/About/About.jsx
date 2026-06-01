@@ -45,7 +45,7 @@ const About = () => {
                         className="uppercase mb-5 text-center Aktiv-Grotesk-Black"
                         style={{ fontSize: "50px" }}
                     >
-                        about me
+                        about
                     </motion.h1>
 
                     <div className="flex items-center justify-center gap-12">
@@ -58,35 +58,36 @@ const About = () => {
 
                         <motion.div
                             variants={itemVariants}
-                            className="w-1/4 Aktiv-Grotesk-Light"
+                            className="w-[30%] Aktiv-Grotesk-Light"
                             style={{ fontSize: "20px" }}
                         >
                             <p>
                                 Fuori da Photoshop sono un costante work in progress, ma davanti a un pc so esattamente cosa fare.
-                                Mi nutro di caffè, intuizioni notturne e libri, forse troppi.
+                                Mi nutro di caffè, intuizioni notturne e libri, forse troppi. <br /><br />
                                 Mi piacciono le sfide, mi piace raccontare, perdermi tra pensieri e colori e trovare soluzioni.
                                 Mi piacciono le tele bianche e i punti di partenza. <br /><br />
-                                Tra un progetto e l’altro cambio interessi con la stessa facilità con cui cambio playlist:
-                                oggi disegno, domani uncinetto, poi sport.
-                                È qui che per me inizia davvero il processo creativo.<br /><br />
-                                Ora che hai letto di me, puoi
+                                Tra un progetto e l’altro cambio interessi con la stessa facilità con cui cambio playlist: oggi disegno,
+                                domani uncinetto, poi sport, cinema o qualsiasi cosa riesca a catturare la mia curiosità.
+                                È qui che per me inizia davvero il processo creativo: quando c’è spazio per costruire, inventare, provare. <br /><br />
+
+                                Se sei arrivato fin qui, puoi
                                 <motion.a href="https://www.linkedin.com/in/sara-molino-6604882b3/" target="_blank"
-                                    className="mx-1 underline text-black inline-block transition-all"
-                                    style={{ fontWeight: 300, willChange: "font-weight"}}
+                                    className="mx-1 underline underline-offset-2 text-black inline-block transition-all"
+                                    style={{ fontWeight: 300, willChange: "font-weight" }}
                                     whileHover={{ fontWeight: 700 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
                                     giudicarmi,
                                 </motion.a>
-                                <motion.a href="mailto:saramolino35@gmail.com" className="mx-1 underline text-black"
+                                <motion.a href="mailto:saramolino35@gmail.com" className="underline underline-offset-2 text-black"
                                     style={{ fontWeight: 300, willChange: "font-weight" }}
                                     whileHover={{ fontWeight: 700 }}
                                     whileTap={{ scale: 0.95 }}>scrivermi,</motion.a>
-                                <motion.a href="https://www.instagram.com/salefino.sm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" className="mx-1 underline text-black" style={{ fontWeight: 300, willChange: "font-weight" }}
+                                <motion.a href="https://www.instagram.com/salefino.sm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" className="mx-1 underline underline-offset-2 text-black" style={{ fontWeight: 300, willChange: "font-weight" }}
                                     whileHover={{ fontWeight: 700 }}
                                     whileTap={{ scale: 0.95 }}>seguirmi</motion.a>
-                                o <motion.span
-                                    className="underline ml-1"
+                                o<motion.span
+                                    className="underline underline-offset-2 ml-1"
                                     initial={{ color: "#000000", fontWeight: 300 }}
                                     style={{ willChange: "font-weight, color", cursor: "pointer" }}
                                     whileHover={{ fontWeight: 700, color: "#FF0000" }}
@@ -117,7 +118,7 @@ const About = () => {
                         className="uppercase mb-4 text-center Aktiv-Grotesk-Black"
                         style={{ fontSize: "clamp(35px, 8vw, 50px)" }}
                     >
-                        about me
+                        about
                     </motion.h1>
 
                     <motion.img
@@ -130,34 +131,35 @@ const About = () => {
                     <motion.div
                         variants={itemVariants}
                         className="Aktiv-Grotesk-Light text-center"
-                        style={{ fontSize: "clamp(16px, 4vw, 20px)" }}
+                        style={{ fontSize: "clamp(10px, 4vw, 18px)" }}
                     >
                         <p>
                             Fuori da Photoshop sono un costante work in progress, ma davanti a un pc so esattamente cosa fare.
-                            Mi nutro di caffè, intuizioni notturne e libri, forse troppi.
-                            Mi piacciono le sfide, mi piace raccontare, perdermi tra pensieri e colori e trovare soluzioni.
-                            Mi piacciono le tele bianche e i punti di partenza. <br /><br />
-                            Tra un progetto e l’altro cambio interessi con la stessa facilità con cui cambio playlist:
-                            oggi disegno, domani uncinetto, poi sport.
-                            È qui che per me inizia davvero il processo creativo.<br /><br />
-                            Ora che hai letto di me, puoi
+                                Mi nutro di caffè, intuizioni notturne e libri, forse troppi. <br /><br />
+                                Mi piacciono le sfide, mi piace raccontare, perdermi tra pensieri e colori e trovare soluzioni.
+                                Mi piacciono le tele bianche e i punti di partenza. <br /><br />
+                                Tra un progetto e l’altro cambio interessi con la stessa facilità con cui cambio playlist: oggi disegno,
+                                domani uncinetto, poi sport, cinema o qualsiasi cosa riesca a catturare la mia curiosità.
+                                È qui che per me inizia davvero il processo creativo: quando c’è spazio per costruire, inventare, provare. <br /><br />
+
+                            Se sei arrivato fin qui, puoi
                             <motion.a href="https://www.linkedin.com/in/sara-molino-6604882b3/" target="_blank"
-                                className="mx-1 underline text-black inline-block transition-all"
+                                className="mx-1 underline underline-offset-2 text-black inline-block transition-all"
                                 style={{ fontWeight: 300, willChange: "font-weight" }}
                                 whileHover={{ fontWeight: 700 }}
                                 whileTap={{ scale: 0.95 }}
                             >
                                 giudicarmi,
                             </motion.a>
-                            <motion.a href="mailto:saramolino35@gmail.com" className="mx-1 underline text-black"
+                            <motion.a href="mailto:saramolino35@gmail.com" className="mx-1 underline underline-offset-2 text-black"
                                 style={{ fontWeight: 300, willChange: "font-weight" }}
                                 whileHover={{ fontWeight: 700 }}
                                 whileTap={{ scale: 0.95 }}>scrivermi,</motion.a>
-                            <motion.a href="https://www.instagram.com/salefino.sm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" className="mx-1 underline text-black" style={{ fontWeight: 300, willChange: "font-weight" }}
-                                    whileHover={{ fontWeight: 700 }}
-                                    whileTap={{ scale: 0.95 }}>seguirmi</motion.a>
+                            <motion.a href="https://www.instagram.com/salefino.sm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" className="mx-1 underline underline-offset-2 text-black" style={{ fontWeight: 300, willChange: "font-weight" }}
+                                whileHover={{ fontWeight: 700 }}
+                                whileTap={{ scale: 0.95 }}>seguirmi</motion.a>
                             o <motion.span
-                                className="underline ml-1"
+                                className="underline underline-offset-2 ml-1"
                                 initial={{ color: "#000000", fontWeight: 300 }}
                                 style={{ willChange: "font-weight, color", cursor: "pointer" }}
                                 whileHover={{ fontWeight: 700, color: "#FF0000" }}
@@ -175,12 +177,12 @@ const About = () => {
             {/* MODAL UNICO (Classi interne convertite a Tailwind) */}
             <Modal show={showBlock} onHide={() => setShowBlock(false)} centered>
                 <div className="p-12 text-center bg-white rounded-[2rem] border-0">
-                    <h2 className="Aktiv-Grotesk-Black mb-3 text-3xl">Aspetta! 🛑</h2>
+                    <h2 className="Aktiv-Grotesk-Black text-3x uppercase">ops</h2>
                     <p className="Aktiv-Grotesk-Light text-xl">
-                        Perché vuoi bloccarmi? Sono i font troppo grandi o è la mia ossessione per l'uncinetto? Ps: se mi blocchi mi offendo (forse).
+                        Richiesta respinta, riprova più tardi.
                     </p>
                     <button
-                        className="bg-black text-white mt-4 px-6 py-2 rounded-full shadow-sm hover:bg-zinc-800 transition-colors"
+                        className="bg-black text-white px-6 py-2 rounded-full shadow-sm hover:bg-zinc-800 transition-colors"
                         onClick={() => setShowBlock(false)}
                     >
                         Ok, ti do un'altra chance
