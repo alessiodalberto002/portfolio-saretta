@@ -83,7 +83,7 @@ export const projectsData = [
     },
     {
         id: 4,
-        name: "scopriamoci - book",
+        name: "scopriamoci - editorial",
         title: "scopriamoci",
         subtitle: "Introspezione e sessualità",
         description1: "In questo libro l’obiettivo era quello porre uno sguardo sulle nostre emozioni e di riflettere sulle nostre sensazioni in un viaggio alla scoperta di qualcosa di nuovo. Per farlo ho utilizzato gli scatti di Robert Mapplethorpe e, attraverso il suo studio, ho approfondito aspetti legati alle emozioni, ai legami e alla sessualità.",
