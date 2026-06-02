@@ -37,11 +37,11 @@ const Navbar = ({ links }) => {
         <>
             <nav className="fixed w-full p-3" style={navStyle}>
                 <div className="w-full flex justify-between items-center relative z-[1001]">
-                    
+
                     {/* Logo - Cambia colore in base a isOpen */}
                     <a
                         href="/#home"
-                        className="uppercase Aktiv-Grotesk-Black text-decoration-none"
+                        className={`uppercase Aktiv-Grotesk-Black text-decoration-none animate-fonts ${isOpen ? "" : ""}`}
                         style={{
                             color: isOpen ? "white" : "black",
                             fontSize: "25px",

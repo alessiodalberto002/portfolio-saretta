@@ -149,7 +149,7 @@ const Hero = () => {
                         key={fontIndex}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ duration: 0.2 }}
+                        transition={{ duration: 0.1 }}
                         className="inline-block"
                         style={{
                             fontFamily: fonts[fontIndex],

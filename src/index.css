@@ -1,6 +1,26 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import "tailwindcss";
 
+/* Definiamo i font che vuoi usare */
+.font-1 {
+    font-family: "Gloria Hallelujah", cursive;
+}
+
+/* Creiamo l'animazione */
+.animate-fonts:hover {
+    animation: changeFonts 0.8s infinite;
+}
+
+@keyframes changeFonts {
+    0% {
+        font-family: "Gloria Hallelujah", cursive;
+    }
+
+    100% {
+        font-family: "Gloria Hallelujah", cursive;
+    }
+}
+
 .Aktiv-Grotesk-Thin {
     font-family: "aktiv-grotesk-thin", sans-serif;
     font-weight: 200;
