@@ -40,7 +40,7 @@ const Navbar = ({ links }) => {
                     
                     {/* Logo - Cambia colore in base a isOpen */}
                     <a
-                        href="/"
+                        href="/#home"
                         className="uppercase Aktiv-Grotesk-Black text-decoration-none"
                         style={{
                             color: isOpen ? "white" : "black",

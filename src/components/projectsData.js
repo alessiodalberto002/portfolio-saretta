@@ -1,6 +1,7 @@
 // Aggiungi "export" davanti alla costante
 import copScalo from "../assets/img/scalo/14_luglio_copertina.jpg"
 import copAmami from "../assets/img/amami/02.png"
+import copScopriamoci from "../assets/img/scopriamoci/copertina.png"
 import videoScalo from "../assets/img/scalo/Reel 4 Collazione Salata.mov"
 import imgScalo1 from "../assets/img/scalo/11_luglio.png"
 import imgScalo2 from "../assets/img/scalo/26_giugno.png"
@@ -14,11 +15,17 @@ import imgAmami3 from "../assets/img/amami/04 (1).png"
 import imgAmami4 from "../assets/img/amami/05 (1).png"
 import imgAmami5 from "../assets/img/amami/06.png"
 import img7p1 from "../assets/img/7p/01.png"
+import video7p from "../assets/img/7p/Mani.mov"
 import img7p2 from "../assets/img/7p/02 (1).png"
 import img7p3 from "../assets/img/7p/03 (1).png"
 import img7p4 from "../assets/img/7p/05 (3).png"
 import img7p5 from "../assets/img/7p/06 (6).png"
-import video7p from "../assets/img/7p/Mani.mov"
+import videoScopriamoci from "../assets/img/scopriamoci/reel.mov"
+import scopriamoci1 from "../assets/img/scopriamoci/card/01.png"
+import scopriamoci2 from "../assets/img/scopriamoci/card/02.png"
+import scopriamoci3 from "../assets/img/scopriamoci/card/03.png"
+import scopriamoci4 from "../assets/img/scopriamoci/card/04.png"
+import scopriamoci5 from "../assets/img/scopriamoci/card/05.png"
 
 export const projectsData = [
     {
@@ -89,6 +96,14 @@ export const projectsData = [
         description1: "In questo libro l’obiettivo era quello porre uno sguardo sulle nostre emozioni e di riflettere sulle nostre sensazioni in un viaggio alla scoperta di qualcosa di nuovo. Per farlo ho utilizzato gli scatti di Robert Mapplethorpe e, attraverso il suo studio, ho approfondito aspetti legati alle emozioni, ai legami e alla sessualità.",
         description2: "Il progetto si divide in due libri: Scopriamoci, in cui vengono analizzate le scelte del fotografo e i suoi scatti vengono utilizzati come pretesto per raccontare aspetti della sessualità considerati tabù, e Aftercare, in cui, proprio come in un rapporto, ci si prende un momento per prendersi cura di sé stessi quando la lettura si fa troppo intensa.",
         description3: "Alla fine del libro si trovano le risposte ad una ricerca qualitativa che nasceva da una semplice domanda: questi scatti di nudo, per te, sono arte?",
-        image_cop: img7p3,
+        image_cop: copScopriamoci,
+        video: videoScopriamoci,
+        gallery: [
+            scopriamoci1,
+            scopriamoci2,
+            scopriamoci3,
+            scopriamoci4,
+            scopriamoci5,
+        ]
     },
 ];

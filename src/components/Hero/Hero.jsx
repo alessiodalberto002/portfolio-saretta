@@ -16,6 +16,31 @@ const Hero = () => {
     const text = "think, create";
     const [isMobile, setIsMobile] = useState(false);
 
+    const fonts = [
+        "'Bungee Shade', cursive",
+        "'Playfair Display', serif",
+        "'Outfit', sans-serif",
+        "'Space Mono', monospace",
+        "'Syne', sans-serif"
+    ];
+
+    const [fontIndex, setFontIndex] = useState(0);
+
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 992);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+
+        const fontInterval = setInterval(() => {
+            setFontIndex((prev) => (prev + 1) % fonts.length);
+        }, 1000);
+
+        return () => {
+            window.removeEventListener('resize', checkMobile);
+            clearInterval(fontInterval);
+        };
+    }, []);
+
     // STATO PER IL POST-IT E IL GATTINO
     // Controlla se mostrare il gattino (true) o il post-it (false)
     const [showKitty, setShowKitty] = useState(false);
@@ -69,8 +94,10 @@ const Hero = () => {
         dur: 3.5 // Un po' più veloce
     };
 
+
+
     return (
-        <section className="w-screen h-screen bg-white flex items-center justify-center relative">
+        <section id='home' className="w-screen h-screen bg-white flex items-center justify-center relative">
 
             {boxes.map((box) => (
                 <motion.div
@@ -105,8 +132,37 @@ const Hero = () => {
                 </motion.div>
             ))}
 
-            {/* TESTO CENTRALE */}
             <div className="w-full text-center relative" style={{ zIndex: 10 }}>
+                <h1
+                    className="flex flex-column font-light text-black tracking-tight m-0 uppercase"
+                    style={{
+                        letterSpacing: '-0.05em',
+                        fontSize: isMobile ? '5rem' : 'calc(2rem + 5vw)',
+                        lineHeight: 1
+                    }}
+                >
+                    {/* "THINK," STAZIONARIO */}
+                    <span className="inline-block">THINK</span>
+
+                    {/* "CREATE" DINAMICO */}
+                    <motion.span
+                        key={fontIndex}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.2 }}
+                        className="inline-block"
+                        style={{
+                            fontFamily: fonts[fontIndex],
+                            transition: 'font-family 0.2s ease'
+                        }}
+                    >
+                        CREATE
+                    </motion.span>
+                </h1>
+            </div>
+
+            {/* TESTO CENTRALE */}
+            {/* <div className="w-full text-center relative" style={{ zIndex: 10 }}>
                 <motion.h1
                     initial="hidden"
                     animate="visible"
@@ -129,56 +185,7 @@ const Hero = () => {
                         </motion.span>
                     ))}
                 </motion.h1>
-            </div>
-
-            {/* POST-IT & KITTY (DECOMMENTALO SE TI SERVE) */}
-            {/* <motion.div
-                initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
-                animate={{
-                    opacity: 1,
-                    scale: 1,
-                    rotate: 0,
-                    y: isMobile ? [0, -5, 0] : [0, -10, 0],
-                }}
-                className="absolute"
-                style={{
-                    zIndex: 15,
-                    overflow: 'hidden',
-                    borderRadius: '2px',
-                    cursor: 'pointer',
-                    width: isMobile ? stickyNoteBox.m.w : stickyNoteBox.d.w,
-                    height: isMobile ? stickyNoteBox.m.h : stickyNoteBox.d.h,
-                    bottom: isMobile ? stickyNoteBox.m.bottom : stickyNoteBox.d.bottom,
-                    right: isMobile ? stickyNoteBox.m.right : stickyNoteBox.d.right,
-                }}
-                onClick={() => setShowKitty(!showKitty)} 
-            >
-                <AnimatePresence mode="wait">
-                    {!showKitty ? (
-                        <motion.img
-                            key="postit"
-                            src={postItImg}
-                            alt="Post-it note"
-                            className="w-full h-full object-cover"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.3 }}
-                        />
-                    ) : (
-                        <motion.img
-                            key="kitty"
-                            src={kittyMemeImg}
-                            alt="Funny cat meme"
-                            className="w-full h-full object-cover"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.3 }}
-                        />
-                    )}
-                </AnimatePresence>
-            </motion.div> */}
+            </div> */}
 
             {/* SCROLL INDICATOR - Rinforzato per visibilità mobile */}
             {/* <motion.div
