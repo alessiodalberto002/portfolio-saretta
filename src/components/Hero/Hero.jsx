@@ -33,7 +33,7 @@ const Hero = () => {
     };
 
     return (
-        <section id='home' className="w-screen h-screen bg-white flex items-center justify-center Aktiv-Grotesk-Bold uppercase">
+        <section id='home' className="w-screen h-screen bg-white flex items-center justify-center Aktiv-Grotesk-Light uppercase">
 
             {/* Container principale responsive: colonna su mobile, riga su desktop */}
             <div className="relative flex flex-col md:flex-row items-center justify-center w-full max-w-7xl px-4 gap-8 md:gap-4">
@@ -41,7 +41,7 @@ const Hero = () => {
                 {/* SINISTRA: "think" (entra da sinistra) */}
                 {/* Su mobile è il primo elemento in alto */}
                 <motion.div
-                    className="text-6xl md:text-8xl font-bold text-gray-900 md:order-1"
+                    className="text-6xl md:text-8xl text-gray-900 md:order-1"
                     initial="hidden"
                     animate="visible"
                     variants={leftTextVariants}
@@ -68,7 +68,7 @@ const Hero = () => {
                 {/* DESTRA: "create" (entra da destra) */}
                 {/* Su mobile è l'ultimo elemento in basso */}
                 <motion.div
-                    className="text-6xl md:text-8xl font-bold text-gray-900 md:order-3"
+                    className="text-6xl md:text-8xl text-gray-900 md:order-3"
                     initial="hidden"
                     animate="visible"
                     variants={rightTextVariants}
