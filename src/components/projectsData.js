@@ -63,10 +63,10 @@ export const projectsData = [
         video: videoAmami,
         gallery: [
             imgAmami1,
-            imgAmami2,
-            imgAmami3,
             imgAmami4,
+            imgAmami2,
             imgAmami5,
+            imgAmami3,
         ]
     },
     {

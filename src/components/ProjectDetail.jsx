@@ -44,68 +44,26 @@ const ProjectDetail = () => {
                 </div>
 
                 {/* COLONNA TESTO */}
-                <div className="w-full md:w-1/2 mb-12 md:mb-0 padding-text-desktop padding-text-mobile">
-                    <div className="md:sticky" style={{ top: "120px", zIndex: 10 }}>
-                        <h1 className="Aktiv-Grotesk-Black uppercase m-0 p-0 text-4xl md:text-5xl">
+                <div className="w-full lg:w-1/2 px-6 md:px-12 lg:px-8">
+
+                    <div className="lg:sticky lg:top-32 lg:h-[calc(100vh-8rem)] lg:overflow-y-auto lg:pr-8">
+
+                        <h1 className="Aktiv-Grotesk-Black uppercase text-[clamp(2rem,5vw,3.5rem)] leading-[1.1] m-0 p-0">
                             {project.title}
                         </h1>
-                        <h2 className="Aktiv-Grotesk-RegularItalic m-0 p-0 text-xl">
+
+                        <h2 className="Aktiv-Grotesk-RegularItalic text-lg md:text-xl mt-2 mb-8">
                             {project.subtitle}
                         </h2>
-                        <p className="mt-4 Aktiv-Grotesk-Light text-[18px]">
-                            {project.description1}
-                        </p>
-                        <p className="mt-4 Aktiv-Grotesk-Light text-[18px]">
-                            {project.description2}
-                        </p>
-                        <p className="mt-4 Aktiv-Grotesk-Light text-[18px]">
-                            {project.description3}
-                        </p>
 
-                        {/* BOTTONE A CASCATA (Classi convertite pronte all'uso) */}
-                        {/* <div className="stats-wrapper mt-4 bg-black text-white">
-                            <Button
-                                onClick={() => setOpen(!open)}
-                                aria-controls="stats-collapse-text"
-                                aria-expanded={open}
-                                variant="link"
-                                className="p-2 no-underline Aktiv-Grotesk-Black text-white text-xl flex items-center"
-                            >
-                                <h1 className="Aktiv-Grotesk-Black text-3xl ml-2 my-0 p-0">{open ? 'I RISULTATI' : 'I RISULTATI'}</h1>
-                                <span style={{
-                                    transform: open ? 'rotate(180deg)' : 'rotate(0deg)',
-                                    transition: 'transform 0.3s ease',
-                                    display: 'inline-block',
-                                    marginLeft: '10px'
-                                }}>
-                                    <i className="fa-solid fa-angle-down text-4xl"></i>
-                                </span>
-                            </Button>
+                        <div className="space-y-6 text-[16px] md:text-[18px] Aktiv-Grotesk-Light text-zinc-800 leading-relaxed pb-20">
+                            {project.description1 && <p>{project.description1}</p>}
+                            {project.description2 && <p>{project.description2}</p>}
+                            {project.description3 && <p>{project.description3}</p>}
 
-                            <Collapse in={open}>
-                                <div id="stats-collapse-text">
-                                    <div className="stats-container py-2 px-3">
-                                        {project.interazioni && (
-                                            <p className="Aktiv-Grotesk-Black text-3xl mb-1 pt-2">
-                                                {project.interazioni}
-                                                {project.time && (
-                                                    <span className="Aktiv-Grotesk-Regular text-xl"> {project.time}</span>
-                                                )}
-                                            </p>
-                                        )}
-
-                                        {project.visualizzazioni && (
-                                            <p className="Aktiv-Grotesk-Black text-3xl">
-                                                {project.visualizzazioni}
-                                                {project.time && (
-                                                    <span className="Aktiv-Grotesk-Regular text-xl"> {project.time}</span>
-                                                )}
-                                            </p>
-                                        )}
-                                    </div>
-                                </div>
-                            </Collapse>
-                        </div> */}
+                            {/* Aggiunto spazio extra in fondo per evitare che 
+                il contenuto venga tagliato su schermi piccoli */}
+                        </div>
                     </div>
                 </div>
             </div>
