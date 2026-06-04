@@ -40,7 +40,8 @@ const About = () => {
                     <motion.div
                         initial={{ y: 20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
-                        className="w-full lg:w-[50%] Aktiv-Grotesk-Light sm:text-center md:text-left text-[18px] text-md-[15px] leading-relaxed"
+                        // Ho aggiunto text-center lg:text-left qui sotto
+                        className="w-full lg:w-[50%] Aktiv-Grotesk-Light text-[18px] text-md-[15px] leading-relaxed"
                     >
                         <p>
                             Fuori da Photoshop sono un costante work in progress, ma davanti a un pc so esattamente cosa fare.
