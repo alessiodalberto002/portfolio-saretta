@@ -6,7 +6,7 @@ import asterisco from "../../assets/img/asterisco.gif";
 const Hero = () => {
     // Varianti per l'animazione del testo che entra da sinistra
     const leftTextVariants = {
-        hidden: { x: -100, opacity: 0 },
+        hidden: { x: -150, opacity: 0 },
         visible: {
             x: 0,
             opacity: 1,
@@ -20,7 +20,7 @@ const Hero = () => {
 
     // Varianti per l'animazione del testo che entra da destra
     const rightTextVariants = {
-        hidden: { x: 100, opacity: 0 },
+        hidden: { x: 150, opacity: 0 },
         visible: {
             x: 0,
             opacity: 1,
@@ -36,7 +36,7 @@ const Hero = () => {
         <section id='home' className="w-screen h-screen bg-white flex items-center justify-center Aktiv-Grotesk-Light uppercase">
 
             {/* Container principale responsive: colonna su mobile, riga su desktop */}
-            <div className="relative flex flex-col md:flex-row items-center justify-center w-full max-w-7xl px-4 gap-8 md:gap-4">
+            <div className="relative flex flex-col md:flex-row items-center justify-center w-full max-w-7xl px-4 gap-10 md:gap-10">
 
                 {/* SINISTRA: "think" (entra da sinistra) */}
                 {/* Su mobile è il primo elemento in alto */}
@@ -61,7 +61,7 @@ const Hero = () => {
                         src={asterisco}
                         alt="Asterisk"
                         // Mantiene la dimensione nativa o si adatta allo schermo
-                        className="max-w-[300px] sm:max-w-[500px] md:max-w-[700px] h-auto"
+                        className="max-w-[150px] sm:max-w-[200px] md:max-w-[150px] h-auto"
                     />
                 </motion.div>
 

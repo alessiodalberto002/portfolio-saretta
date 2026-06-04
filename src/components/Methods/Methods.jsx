@@ -7,7 +7,7 @@ const Methods = () => {
             <div className="flex flex-col md:flex-row justify-center items-center h-full text-center md:text-left">
 
                 {/* Titolo: margin-bottom su mobile, margin-right su desktop */}
-                <h1 className="uppercase Aktiv-Grotesk-Black mb-4 md:mb-0 md:mr-4"
+                <h1 className="uppercase Aktiv-Grotesk-Black m-0 p-0"
                     style={{ fontSize: "clamp(60px, 8vw, 75px)" }}>
                     come lavoro
                 </h1>
