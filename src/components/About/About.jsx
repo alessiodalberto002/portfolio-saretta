@@ -51,7 +51,7 @@ const About = () => {
                             domani uncinetto, poi sport, cinema o qualsiasi cosa riesca a catturare la mia curiosità.
                             È qui che per me inizia davvero il processo creativo: quando c’è spazio per costruire, inventare, provare. <br /><br />
 
-                            Se sei arrivato fin qui, puoi
+                            Se sei arrivato fin qui puoi:
                             {['giudicarmi,', 'scrivermi,', 'seguirmi'].map((text, i) => (
                                 <motion.a
                                     key={i}
