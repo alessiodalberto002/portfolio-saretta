@@ -34,7 +34,7 @@ const Navbar = ({ links }) => {
     };
 
     return (
-        <nav className="fixed w-full p-3" style={navStyle}>
+        <nav className="fixed w-full p-2" style={navStyle}>
             <div className="w-full flex justify-between items-center relative z-[1001]">
 
                 {/* Logo con effetto Sostituzione Hover */}
