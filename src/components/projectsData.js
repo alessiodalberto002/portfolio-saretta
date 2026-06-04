@@ -94,7 +94,7 @@ export const projectsData = [
         title: "scopriamoci",
         subtitle: "Introspezione e sessualità",
         description1: "In questo libro l’obiettivo era quello porre uno sguardo sulle nostre emozioni e di riflettere sulle nostre sensazioni in un viaggio alla scoperta di qualcosa di nuovo. Per farlo ho utilizzato gli scatti di Robert Mapplethorpe e, attraverso il suo studio, ho approfondito aspetti legati alle emozioni, ai legami e alla sessualità.",
-        description2: "Il progetto si divide in due libri: Scopriamoci, in cui gli scatti del fotografo vengono utilizzati come pretesto per raccontare aspetti della sessualità considerati tabù, e Aftercare, in cui, proprio come in un rapporto, ci si ferma un momento per prendersi cura di sé stessi quando la lettura si fa troppo intensa.",
+        description2: "Il progetto, strutturato come un incontro tra due amanti, si divide in due libri: Scopriamoci, in cui gli scatti del fotografo vengono utilizzati come pretesto per raccontare aspetti della sessualità considerati tabù, e Aftercare, in cui, proprio come in un rapporto, ci si ferma un momento per prendersi cura di sé stessi quando la lettura si fa troppo intensa.",
         description3: "Alla fine del libro si trovano le risposte ad una ricerca qualitativa che nasce da una semplice domanda: questi scatti di nudo, per te, sono arte?",
         image_cop: copScopriamoci,
         video: videoScopriamoci,
