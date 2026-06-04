@@ -56,7 +56,7 @@ export const projectsData = [
         subtitle: "Molto più di un semplice festival",
         description1: "Amami Teatro è molto più di un evento: è energia, movimento e spettacolo che prende vita per 8.640 minuti ininterrotti all’interno del Teatro Marrucino di Chieti. L’obiettivo del progetto era raccontare tutta l’intensità del festival attraverso una comunicazione capace di trasmetterne il ritmo, l’atmosfera e le emozioni sul palco e dietro le quinte.", 
         description2: "Teaser, backstage, reel e trend diventano strumenti per avvicinare il pubblico all’esperienza, rendendolo partecipe di tutto ciò che avviene all’interno del Teatro. Il tone of voice è coinvolgente e contemporaneo, pensato per raccontare qualcosa di vicino, vivo e condivisibile anche sui social.",
-        description3: "Dove l’arte e il pubblico si fondono in modo naturale. Il risultato è un feed riconoscibile e in continua evoluzione, dove arte e comunicazione si incontrano in modo naturale in un racconto visivo capace di creare attesa, connessione e partecipazione.",
+        description3: "Dove l’arte e il pubblico si fondono in modo naturale. Il risultato è un feed riconoscibile e in continua evoluzione, dove arte e pubblico si fondono in modo naturale in un racconto visivo capace di creare attesa, connessione e partecipazione.",
         interazioni: "+157.000 PERSONE RAGGIUNTE",
         time: "in una settimana",
         image_cop: copAmami,
