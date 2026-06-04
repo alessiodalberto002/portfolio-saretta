@@ -76,7 +76,7 @@ export const projectsData = [
         subtitle: "make it unique",
         description1: "Si può trasformare un semplice imballaggio in polietilene in un prodotto unico? La sfida era andare oltre il prodotto stesso e costruire una comunicazione con un’identità forte e riconoscibile. Da oltre 40 anni Sevenplast opera nel settore degli imballaggi in polietilene per il mercato B2B e aveva bisogno di rafforzare la sua presenza online",
         description2: "Il concept creativo nasce dall’idea di trattare ogni dettaglio con la stessa cura riservata a un prodotto di alta moda. Texture, materiali, luci e composizioni diventano così parte di un racconto visivo più ricercato, dove anche l’imballaggio assume carattere, presenza ed estetica.",
-        description3: " La comunicazione punta su precisione, qualità e attenzione ai particolari, trasformando un settore tecnico in qualcosa di visivamente contemporaneo e interessante da osservare. Il risultato è un feed pulito, distintivo e coerente, capace non solo di valorizzare il prodotto, ma anche di trasmettere una storia fatta di esperienza, aﬃdabilità e scelte consapevoli.",
+        description3: " La comunicazione punta su precisione, qualità e attenzione ai particolari, trasformando un settore tecnico in qualcosa di visivamente contemporaneo. Il risultato è un feed pulito, distintivo e coerente, capace non solo di valorizzare il prodotto, ma anche di trasmettere una storia fatta di esperienza, aﬃdabilità e scelte consapevoli.",
         interazioni: "+157.000 PERSONE RAGGIUNTE",
         image_cop: img7p5,
         video: video7p,
