@@ -41,7 +41,7 @@ const About = () => {
                         initial={{ y: 20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         // Ho aggiunto text-center lg:text-left qui sotto
-                        className="w-full lg:w-[50%] Aktiv-Grotesk-Light text-[18px] text-md-[15px] leading-relaxed"
+                        className="w-full lg:w-[50%] Aktiv-Grotesk-Light text-[18px] text-md-[15px] leading-relaxed text-mobile text-desktop"
                     >
                         <p>
                             Fuori da Photoshop sono un costante work in progress, ma davanti a un pc so esattamente cosa fare.

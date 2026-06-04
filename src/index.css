@@ -196,6 +196,10 @@ h1.hero-text:nth-of-type(2) {
     padding: 55px 0;
 }
 
+.text-mobile {
+    text-align: center;
+}
+
 /* REGOLE DESKTOP (Ripristino esatto del tuo layout) */
 @media (min-width: 992px) {
     .hero-text {
@@ -231,6 +235,10 @@ h1.hero-text:nth-of-type(2) {
 
     .padding-desktop {
         padding: 150px 0;
+    }
+
+    .text-desktop {
+        text-align: left;
     }
 
 }
