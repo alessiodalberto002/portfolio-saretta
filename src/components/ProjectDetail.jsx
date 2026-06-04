@@ -15,7 +15,7 @@ const ProjectDetail = () => {
     }
 
     return (
-        <div className="py-12" style={{ marginTop: "80px" }}>
+        <div className="pb-12" style={{ marginTop: "80px" }}>
             <div className="flex flex-col-reverse md:flex-row">
 
                 {/* COLONNA IMMAGINI */}
