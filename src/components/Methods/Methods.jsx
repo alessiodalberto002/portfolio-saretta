@@ -14,7 +14,7 @@ const Methods = () => {
 
                 {/* Gruppo GIF con parentesi */}
                 <div className="flex items-center justify-center p-4">
-                    <h1 className="uppercase Aktiv-Grotesk-Black m-0 p-0"
+                    <h1 className="uppercase Aktiv-Grotesk-Black p-0 mb-2"
                         style={{ fontSize: "clamp(40px, 8vw, 70px)" }}>(</h1>
 
                     <img
@@ -24,7 +24,7 @@ const Methods = () => {
                         style={{ maxWidth: "600px" }}
                     />
 
-                    <h1 className="uppercase Aktiv-Grotesk-Black m-0 p-0"
+                    <h1 className="uppercase Aktiv-Grotesk-Black p-0 mb-2"
                         style={{ fontSize: "clamp(40px, 8vw, 75px)" }}>)</h1>
                 </div>
 

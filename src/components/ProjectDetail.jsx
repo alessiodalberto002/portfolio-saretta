@@ -26,8 +26,9 @@ const ProjectDetail = () => {
                                 src={project.video}
                                 autoPlay
                                 loop
+                                muted // Importante: necessario per l'autoPlay su molti browser
                                 playsInline
-                                className="object-cover h-full w-full">
+                                className="object-contain h-full w-full">
                             </video>
                         </div>
                     )}
