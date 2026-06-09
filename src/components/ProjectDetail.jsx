@@ -1,7 +1,7 @@
 import React, { useState } from "react"; // <--- 1. Importa useState
 import { useParams } from "react-router-dom";
 import { projectsData } from "../components/projectsData.js";
-import { Button, Collapse } from 'react-bootstrap';
+import { motion } from "framer-motion";
 
 const ProjectDetail = () => {
     const { id } = useParams();
@@ -21,7 +21,7 @@ const ProjectDetail = () => {
                 {/* COLONNA IMMAGINI */}
                 <div className="w-full md:w-1/2 flex flex-col items-center justify-center">
                     {project.video && (
-                        <div className="img-size-project-desktop img-size-project-mobile mb-12">
+                        <div className="img-size-project-desktop img-size-project-mobile mb-12 mt-12 md:mt-0">
                             <video
                                 src={project.video}
                                 autoPlay
@@ -56,13 +56,22 @@ const ProjectDetail = () => {
                             {project.subtitle}
                         </h2>
 
-                        <div className="space-y-6 text-[16px] md:text-[18px] Aktiv-Grotesk-Light text-zinc-800 leading-relaxed pb-20">
+                        <div className="space-y-6 text-[16px] md:text-[18px] Aktiv-Grotesk-Light text-zinc-800 leading-relaxed pb-4">
                             {project.description1 && <p>{project.description1}</p>}
                             {project.description2 && <p>{project.description2}</p>}
                             {project.description3 && <p>{project.description3}</p>}
+                        </div>
 
-                            {/* Aggiunto spazio extra in fondo per evitare che 
-                il contenuto venga tagliato su schermi piccoli */}
+                        <div className="flex flex-wrap gap-2 md:gap-3">
+                            {project.tags.map((tag, index) => (
+                                <motion.span
+                                    key={index}
+                                    className="px-3 py-1.5 md:px-4 md:py-2 text-md md:text-base bg-black text-white rounded-md whitespace-nowrap uppercase"
+                                    whileHover={{ y: -5, rotate: 5 }}
+                                >
+                                    {tag}
+                                </motion.span>
+                            ))}
                         </div>
                     </div>
                 </div>

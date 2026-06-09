@@ -38,6 +38,11 @@ export const projectsData = [
         description3: " Non una semplice vetrina digitale, ma un racconto continuo capace di trasmettere l’energia del brand e creare una connessione reale con la community.",
         interazioni: "+70.000 INTERAZIONI",
         visualizzazioni: "+1.600.000 VISUALIZZAZIONI",
+        tags: [
+            "art direction",
+            "copywriting",
+            "gestione shooting",
+        ],
         time: "in un anno",
         image_cop: copScalo,
         video: videoScalo,
@@ -54,10 +59,16 @@ export const projectsData = [
         name: "amami teatro - event",
         title: "in scena e fuori scena",
         subtitle: "Molto più di un semplice festival",
-        description1: "Amami Teatro è molto più di un evento: è energia, movimento e spettacolo che prende vita per 8.640 minuti ininterrotti all’interno del Teatro Marrucino di Chieti. L’obiettivo del progetto era raccontare tutta l’intensità del festival attraverso una comunicazione capace di trasmetterne il ritmo, l’atmosfera e le emozioni sul palco e dietro le quinte.", 
+        description1: "Amami Teatro è molto più di un evento: è energia, movimento e spettacolo che prende vita per 8.640 minuti ininterrotti all’interno del Teatro Marrucino di Chieti. L’obiettivo del progetto era raccontare tutta l’intensità del festival attraverso una comunicazione capace di trasmetterne il ritmo, l’atmosfera e le emozioni sul palco e dietro le quinte.",
         description2: "Teaser, backstage, reel e trend diventano strumenti per avvicinare il pubblico all’esperienza, rendendolo partecipe di tutto ciò che avviene all’interno del Teatro. Il tone of voice è coinvolgente e contemporaneo, pensato per raccontare qualcosa di vicino, vivo e condivisibile anche sui social.",
         description3: "Il risultato è un feed riconoscibile e in continua evoluzione, dove arte e pubblico si fondono in modo naturale in un racconto visivo capace di creare attesa, connessione e partecipazione.",
         interazioni: "+157.000 PERSONE RAGGIUNTE",
+        tags: [
+            "art direction",
+            "copywriting",
+            "copertura evento",
+            "content creation",
+        ],
         time: "in una settimana",
         image_cop: copAmami,
         video: videoAmami,
@@ -78,6 +89,10 @@ export const projectsData = [
         description2: "Il concept creativo nasce dall’idea di trattare ogni dettaglio con la stessa cura riservata a un prodotto di alta moda. Texture, materiali, luci e composizioni diventano così parte di un racconto visivo più ricercato, dove anche l’imballaggio assume carattere.",
         description3: "La comunicazione punta su precisione, qualità e attenzione ai particolari, trasformando un settore tecnico in qualcosa di visivamente contemporaneo. Il risultato è un feed pulito, distintivo e coerente, capace non solo di valorizzare il prodotto, ma anche di trasmettere una storia fatta di esperienza, aﬃdabilità e scelte consapevoli.",
         interazioni: "+157.000 PERSONE RAGGIUNTE",
+        tags: [
+            "art direction",
+            "copywriting",
+        ],
         image_cop: img7p5,
         video: video7p,
         gallery: [
@@ -96,6 +111,9 @@ export const projectsData = [
         description1: "In questo libro l’obiettivo era quello porre uno sguardo sulle nostre emozioni e di riflettere sulle nostre sensazioni in un viaggio alla scoperta di qualcosa di nuovo. Per farlo ho utilizzato gli scatti di Robert Mapplethorpe e, attraverso il suo studio, ho approfondito aspetti legati alle emozioni, ai legami e alla sessualità.",
         description2: "Il progetto, strutturato come un incontro tra due amanti, si divide in due libri: Scopriamoci, in cui gli scatti del fotografo vengono utilizzati come pretesto per raccontare aspetti della sessualità considerati tabù, e Aftercare, in cui, proprio come in un rapporto, ci si ferma un momento per prendersi cura di sé stessi quando la lettura si fa troppo intensa.",
         description3: "Alla fine del libro si trovano le risposte ad una ricerca qualitativa che nasce da una semplice domanda: questi scatti di nudo, per te, sono arte?",
+        tags: [
+            "personal project",
+        ],
         image_cop: copScopriamoci,
         video: videoScopriamoci,
         gallery: [
