@@ -66,7 +66,6 @@ export const projectsData = [
         tags: [
             "art direction",
             "copywriting",
-            "copertura evento",
             "content creation",
         ],
         time: "in una settimana",
