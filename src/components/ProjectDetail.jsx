@@ -66,7 +66,7 @@ const ProjectDetail = () => {
                             {project.tags.map((tag, index) => (
                                 <motion.span
                                     key={index}
-                                    className="px-3 py-1.5 md:px-4 md:py-2 text-md md:text-base bg-black text-white rounded-md whitespace-nowrap uppercase"
+                                    className="px-3 py-1.5 md:px-4 md:py-2 text-md md:text-base bg-black text-white whitespace-nowrap uppercase"
                                     whileHover={{ y: -5, rotate: 5 }}
                                 >
                                     {tag}
