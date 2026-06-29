@@ -72,7 +72,7 @@ const Footer = () => {
 
                 {/* Testo finale centrato su mobile per estetica, mantenuto normale su desktop */}
                 <motion.a href="#" className="Aktiv-Grotesk-Light text-black text-center md:text-left mt-3 md:mt-2 block text-decoration-none">
-                    Twinkle twinkle little design, how I wonder what you'll shine! Up above the page so high, ideas sparkling in my eye.
+                    Twinkle twinkle little star, how I wonder what you are! Up above the page so high, ideas sparkling in my eye.
                 </motion.a>
             </div>
         </>
