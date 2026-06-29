@@ -49,17 +49,19 @@ const ProjectDetail = () => {
                     <div className="lg:sticky lg:top-32 lg:h-[calc(100vh-8rem)] lg:overflow-y-auto lg:pr-8">
 
                         <h1 className="Aktiv-Grotesk-Black uppercase text-[clamp(2rem,5vw,3.5rem)] leading-[1.1] m-0 p-0">
-                            {project.title}
+                            {project.title} / {project.subtitle}
                         </h1>
 
-                        <h2 className="Aktiv-Grotesk-RegularItalic text-lg md:text-xl mt-2 mb-8">
+                        {/* <h2 className="Aktiv-Grotesk-RegularItalic text-lg md:text-xl mt-2 mb-8">
                             {project.subtitle}
-                        </h2>
+                        </h2> */}
 
-                        <div className="space-y-6 text-[16px] md:text-[18px] Aktiv-Grotesk-Light text-zinc-800 leading-relaxed pb-4">
-                            {project.description1 && <p>{project.description1}</p>}
+                        <div className="space-y-6 text-[16px] md:text-[18px] text-zinc-800 leading-relaxed mt-4 pb-4">
+                            {project.description1 && <p className="fw-regualar text-4xl">{project.description1}</p>}
                             {project.description2 && <p>{project.description2}</p>}
                             {project.description3 && <p>{project.description3}</p>}
+                            {project.description4 && <p>{project.description4}</p>}
+                            {project.description5 && <p>{project.description5}</p>}
                         </div>
 
                         <div className="flex flex-wrap gap-2 md:gap-3">
