@@ -25,7 +25,7 @@ const About = () => {
                 </motion.h1>
 
                 {/* CONTENITORE PRINCIPALE: allineamento verticale per schermi piccoli */}
-                <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 lg:gap-16 mt-12">
+                <div className="flex flex-col lg:flex-row items-center lg:items-center justify-center gap-10 lg:gap-16 mt-12">
 
                     {/* IMMAGINE: Max-width controllata per evitare che sovrasti il testo */}
                     <motion.div
@@ -44,13 +44,16 @@ const About = () => {
                         className="w-full lg:w-[50%] Aktiv-Grotesk-Light text-[18px] text-md-[15px] leading-relaxed text-mobile text-desktop"
                     >
                         <p>
-                            Fuori da Photoshop sono un costante work in progress, ma davanti a un pc so esattamente cosa fare.
-                            Mi nutro di caffè, intuizioni notturne e libri, forse troppi. <br /><br />
-                            Mi piacciono le sfide, mi piace raccontare, perdermi tra pensieri e colori e trovare soluzioni.
-                            Mi piacciono le tele bianche e i punti di partenza. <br /><br />
-                            Tra un progetto e l’altro cambio interessi con la stessa facilità con cui cambio playlist: oggi disegno,
-                            domani uncinetto, poi sport, cinema o qualsiasi cosa riesca a catturare la mia curiosità.
-                            È qui che per me inizia davvero il processo creativo: quando c’è spazio per costruire, inventare, provare. <br /><br />
+                            Fuori da Photoshop sono un costante work in progress, ma davanti a un pc so esattamente cosa
+                            fare. Mi nutro di caffè, intuizioni notturne e libri, forse troppi.<br /><br />
+                            Mi piacciono le sfide, mi piace raccontare, perdermi tra pensieri, colori e parole e trovare soluzioni.
+                            Mi piacciono le tele bianche e i punti di partenza.<br /><br />
+                            Tra un progetto e l’altro cambio interessi con la stessa facilità con cui cambio playlist: oggi
+                            disegno, domani uncinetto, poi sport, cinema o qualsiasi cosa riesca a catturare la mia curiosità. È
+                            qui che per me inizia davvero il processo creativo: quando c’è spazio per costruire, inventare,
+                            provare e riprovare.<br /><br />
+                            Per saperne di più su chi sono e cosa mi passa per la testa non vi resta che girare per queste
+                            pagine coperte di pixel e sogni. Buona lettura! <br /><br />
 
                             Se sei arrivato fin qui puoi:
                             {['giudicarmi,', 'scrivermi,', 'seguirmi'].map((text, i) => (
