@@ -66,20 +66,22 @@ const Footer = () => {
                             saramolino35@gmail.com
                         </motion.a>
 
+                    </div>
+
+                    <div className="flex justify-between items-center gap-3 text-xl">
+
                         {/* Bottone Scarica Portfolio */}
                         <motion.a
                             href="/portfolio.pdf" // 👈 Sostituisci "tuo-portfolio.pdf" con il nome esatto del file nella cartella public
                             download="Portfolio_Sara_Molino.pdf" // Nome che avrà il file scaricato
-                            className="flex items-center gap-2 border border-black text-black px-3 py-1 rounded-full text-xs font-medium mx-4 transition-colors duration-200"
+                            className="flex items-center gap-2 border border-black text-black px-3 py-1 rounded-full text-xs font-medium transition-colors duration-200"
                             whileHover={{ y: -2, scale: 1.03 }}
                             whileTap={{ scale: 0.95 }}
                         >
                             <i className="fa-solid fa-download"></i>
                             <span>CV</span>
                         </motion.a>
-                    </div>
 
-                    <div className="flex justify-between items-center gap-3 text-xl">
                         {/* Container del badge di Instagram + Fumetto */}
                         <div className="relative inline-block">
                             {/* Fumetto Pop-up */}
@@ -131,7 +133,7 @@ const Footer = () => {
                 </div>
 
                 {/* Testo finale centrato su mobile per estetica, mantenuto normale su desktop */}
-                <motion.a href="#" className="Aktiv-Grotesk-Light text-black text-center md:text-left mt-3 md:mt-2 block text-decoration-none">
+                <motion.a href="#" className="Aktiv-Grotesk-Light text-black text-center md:text-left text-sx md:text-md mt-3 md:mt-2 block text-decoration-none">
                     © 2026 tutti i diritti riservati, se hai letto fin qua giù ora le opzioni sono due: o mi offri un lavoro o un aperitivo
                 </motion.a>
             </div>

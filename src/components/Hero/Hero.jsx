@@ -83,8 +83,8 @@ const Hero = () => {
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{ duration: 1, ease: "backOut" }}
                         className='flex justify-center items-center Aktiv-Grotesk-Thin text-center p-4'>
-                            
-                    <p className="text-xl md:text-2xl">(faccio cose belle per evitare di dovermi trovare un lavoro noioso)</p>
+
+                    <p className="text-md md:text-2xl">(faccio cose belle per evitare di dovermi trovare un lavoro noioso)</p>
                 </motion.div>
             </div>
 
