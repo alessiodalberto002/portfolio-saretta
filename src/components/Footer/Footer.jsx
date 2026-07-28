@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import firma from "../../assets/img/firma_sara.png"
-import { motion } from "framer-motion";
+import firma from "../../assets/img/firma_sara.png";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Footer = () => {
-
     const [isHovered, setIsHovered] = useState(false);
+    const [isInstaHovered, setIsInstaHovered] = useState(false);
 
     return (
         <>
@@ -54,29 +54,89 @@ const Footer = () => {
                         />
                     </a>
 
-                    <motion.a
-                        href="mailto:saramolino35@gmail.com"
-                        className="m-0 Aktiv-Grotesk-Light text-black text-decoration-none"
-                        style={{ fontWeight: 300, willChange: "font-weight" }} // Suggerisce al browser di ottimizzare l'animazione di questa proprietà
-                        whileHover={{ fontWeight: 700, y: -5, rotate: 2 }}
-                        whileTap={{ scale: 0.95 }}
-                    >
-                        saramolino35@gmail.com
-                    </motion.a>
+                    {/* Contenitore per Email e Bottone Download Portfolio */}
+                    <div className="flex flex-col sm:flex-row items-center gap-3">
+                        <motion.a
+                            href="mailto:saramolino35@gmail.com"
+                            className="m-0 Aktiv-Grotesk-Light text-black text-decoration-none"
+                            style={{ fontWeight: 300, willChange: "font-weight" }}
+                            whileHover={{ fontWeight: 700, y: -2, rotate: 1 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            saramolino35@gmail.com
+                        </motion.a>
+
+                        {/* Bottone Scarica Portfolio */}
+                        <motion.a
+                            href="/portfolio.pdf" // 👈 Sostituisci "tuo-portfolio.pdf" con il nome esatto del file nella cartella public
+                            download="Portfolio_Sara_Molino.pdf" // Nome che avrà il file scaricato
+                            className="flex items-center gap-2 border border-black text-black px-3 py-1 rounded-full text-xs font-medium mx-4 transition-colors duration-200"
+                            whileHover={{ y: -2, scale: 1.03 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            <i className="fa-solid fa-download"></i>
+                            <span>CV</span>
+                        </motion.a>
+                    </div>
 
                     <div className="flex justify-between items-center gap-3 text-xl">
-                        <motion.a href="https://www.instagram.com/salefino.sm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="text-black no-underline" target="_blank" rel="noopener noreferrer" whileHover={{ y: -5, rotate: 5 }} whileTap={{ scale: 0.9 }}><i className="fa-brands fa-instagram"></i></motion.a>
-                        <motion.a href="https://www.linkedin.com/in/sara-molino-6604882b3/" className="text-black no-underline" target="_blank" rel="noopener noreferrer" whileHover={{ y: -5, rotate: 5 }} whileTap={{ scale: 0.9 }}><i className="fa-brands fa-linkedin-in"></i></motion.a>
+                        {/* Container del badge di Instagram + Fumetto */}
+                        <div className="relative inline-block">
+                            {/* Fumetto Pop-up */}
+                            <AnimatePresence>
+                                {isInstaHovered && (
+                                    <motion.div
+                                        initial={{ opacity: 0, scale: 0.5, y: 10 }}
+                                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                                        exit={{ opacity: 0, scale: 0.5, y: 5 }}
+                                        transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                                        className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 z-10 whitespace-nowrap pointer-events-none"
+                                    >
+                                        {/* Box stile fumetto */}
+                                        <div className="bg-yellow-300 text-black font-extrabold text-xs px-3 py-1.5 rounded-2xl border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
+                                            se ti avanza un follow clicca qui!
+                                        </div>
+                                        {/* Freccetta del fumetto */}
+                                        <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-black mx-auto -mt-[1px]" />
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+
+                            {/* Icona Instagram */}
+                            <motion.a
+                                href="https://www.instagram.com/salefino.sm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                                className="text-black no-underline block"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onMouseEnter={() => setIsInstaHovered(true)}
+                                onMouseLeave={() => setIsInstaHovered(false)}
+                                whileHover={{ y: -5, rotate: 5 }}
+                                whileTap={{ scale: 0.9 }}
+                            >
+                                <i className="fa-brands fa-instagram"></i>
+                            </motion.a>
+                        </div>
+
+                        <motion.a
+                            href="https://www.linkedin.com/in/sara-molino-6604882b3/"
+                            className="text-black no-underline"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ y: -5, rotate: 5 }}
+                            whileTap={{ scale: 0.9 }}
+                        >
+                            <i className="fa-brands fa-linkedin-in"></i>
+                        </motion.a>
                     </div>
                 </div>
 
                 {/* Testo finale centrato su mobile per estetica, mantenuto normale su desktop */}
                 <motion.a href="#" className="Aktiv-Grotesk-Light text-black text-center md:text-left mt-3 md:mt-2 block text-decoration-none">
-                    Twinkle twinkle little star, how I wonder what you are! Up above the page so high, ideas sparkling in my eye.
+                    © 2026 tutti i diritti riservati, se hai letto fin qua giù ora le opzioni sono due: o mi offri un lavoro o un aperitivo
                 </motion.a>
             </div>
         </>
     )
 }
 
-export default Footer
+export default Footer;

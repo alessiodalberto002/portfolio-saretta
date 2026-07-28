@@ -27,6 +27,7 @@ const ProjectDetail = () => {
                                 autoPlay
                                 loop
                                 playsInline
+                                controls
                                 className="object-cover h-full w-full">
                             </video>
                         </div>
