@@ -35,9 +35,9 @@ const Hero = () => {
     return (
         <section id='home' className="w-screen h-screen bg-white flex items-center justify-center Aktiv-Grotesk-Light">
 
-            <div className="flex flex-col">
+            <div className="flex flex-col h-full justify-center items-center">
                 {/* Container principale responsive: colonna su mobile, riga su desktop */}
-                <div className="relative flex flex-col md:flex-row items-center justify-center w-full max-w-7xl px-4 gap-10 md:gap-10">
+                <div className="relative flex flex-col md:flex-row items-center justify-center h-full w-full max-w-7xl px-4 gap-10 md:gap-10">
 
                     {/* SINISTRA: "think" (entra da sinistra) */}
                     {/* Su mobile è il primo elemento in alto */}
@@ -82,9 +82,9 @@ const Hero = () => {
                 <motion.div initial={{ scale: 0.8, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{ duration: 1, ease: "backOut" }}
-                        className='flex justify-center items-center Aktiv-Grotesk-Thin text-center p-4'>
+                        className='flex Aktiv-Grotesk-Thin text-center p-4'>
 
-                    <p className="text-md md:text-2xl">(faccio cose belle per evitare di dovermi trovare un lavoro noioso)</p>
+                    <p className="text-2xl md:text-2xl">*faccio cose belle per evitare di dovermi trovare un lavoro noioso</p>
                 </motion.div>
             </div>
 

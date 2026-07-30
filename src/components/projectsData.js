@@ -62,7 +62,7 @@ export const projectsData = [
         description1: "8.640 minuti ininterrotti.",
         description2: "E no, non è il tempo che ci metti a trovare parcheggio nelle vie del centro, ma la durata di Amami Teatro. Un flusso ininterrotto in cui il Teatro Marrucino di Chieti si trasforma in un organismo vivo fatto di corpi, voci, silenzi e gente che non sta ferma un secondo.",
         description3: "Come lo racconti uno sbattimento così intenso senza farlo sembrare la solita roba ingessata? Semplice: muovendoti alla stessa folle velocità del festival.",
-        description4: "Niente testi pettinati. Ogni contenuto era un buco tra la folla per spiare il festival tra tesser per far salire l’hype, backstage per farti vedere tutto quello che col cavolo che vedi se te ne stai seduto in platea e trend per farti capire che Amami Teatro non è un posto per vecchie signore con la pelliccia.",
+        description4: "Niente testi pettinati. Ogni contenuto era un buco tra la folla per spiare il festival tra teaser per far salire l’hype, backstage per farti vedere tutto quello che col cavolo che vedi se te ne stai seduto in platea e trend per farti capire che Amami Teatro non è un posto per vecchie signore con la pelliccia.",
         description5: "Risultato? Un feed schizofrenico e bellissimo. Palco, pubblico e artisti si sfiorano, si incrociano e si fondono finché non si capisce più chi recita e chi guarda. Un racconto che ti tira dentro, minuto dopo minuto, e distrugge la distanza tra te e lo spettacolo.",
         interazioni: "+157.000 PERSONE RAGGIUNTE",
         tags: [
@@ -113,10 +113,10 @@ export const projectsData = [
         title: "scopriamoci",
         subtitle: "Introspezione e sessualità",
         description1: "Questo progetto rappresenta tutto ciò che di solito fai finta di non vedere.",
-        description2: "Più che un libro è una seduta di autocoscienza a base emozioni e tabù. Un viaggio che spinge sull'acceleratore affrontando robe scomode di cui non parleresti nemmeno sotto tortura. E se la botta emotiva è troppo forte? Niente panico. Nella copertina abbiamo sigillato Aftercare: lo rompi come un vetro di emergenza quando il percorso si fa pesante e hai bisogno di un abbraccio di carta.",
-        description3: "Anche l’impaginazione non è messa lì a caso ma sfogliando viaggi tra la tensione delle diagonali, richiami diretti alle mostre del nostro protagonista e al suo modo di lavorare: dai collage alle polaroid.",
+        description2: "Più che un libro è una seduta di autocoscienza a base emozioni e tabù. Un viaggio che spinge sull'acceleratore affrontando robe scomode di cui non parleresti nemmeno sotto tortura. E se la botta emotiva è troppo forte? Niente panico. Nella copertina ho sigillato Aftercare: lo rompi come un vetro di emergenza quando il percorso si fa pesante e hai bisogno di nasconderti tra lenzuola di carta.",
+        description3: "Anche l’impaginazione non è messa lì a caso, ma sfogliando viaggi tra la tensione delle diagonali e richiami diretti alle mostre del nostro protagonista e al suo modo di lavorare: dai collage alle polaroid.",
         description4: "Poi c'è il domandone: ma questa è arte o pornografia?",
-        description5: "Invece di fare i finti intellettuali, lo abbiamo chiesto a un gruppo di persone reali. Le loro risposte accompagnano la fine del libro e dimostrano una cosa molto semplice: il significato di una foto dipende tutto dagli occhi (e dalla malizia) di chi la guarda. Il progetto si chiude con l'ultima foto che Robert mandò agli amici prima di lasciarci (purtroppo). Un mazzo di tulipani appassiti.",
+        description5: "Invece di fare l’intellettuale, l’ho chiesto a un gruppo di persone reali. Le loro risposte accompagnano la fine del libro e dimostrano una cosa molto semplice: il significato di una foto dipende tutto dagli occhi (e dalla malizia) di chi la guarda. Il progetto si chiude con l'ultima foto che Robert mandò agli amici prima di lasciarci (purtroppo). Un mazzo di tulipani appassiti.",
         tags: [
             "personal project",
         ],

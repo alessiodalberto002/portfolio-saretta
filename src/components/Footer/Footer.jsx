@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const Footer = () => {
     const [isHovered, setIsHovered] = useState(false);
     const [isInstaHovered, setIsInstaHovered] = useState(false);
+    const [isCvHovered, setIsCvHovered] = useState(false);
 
     return (
         <>
@@ -70,17 +71,40 @@ const Footer = () => {
 
                     <div className="flex justify-between items-center gap-3 text-xl">
 
-                        {/* Bottone Scarica Portfolio */}
-                        <motion.a
-                            href="/portfolio.pdf" // 👈 Sostituisci "tuo-portfolio.pdf" con il nome esatto del file nella cartella public
-                            download="Portfolio_Sara_Molino.pdf" // Nome che avrà il file scaricato
-                            className="flex items-center gap-2 border border-black text-black px-3 py-1 rounded-full text-xs font-medium transition-colors duration-200"
-                            whileHover={{ y: -2, scale: 1.03 }}
-                            whileTap={{ scale: 0.95 }}
-                        >
-                            <i className="fa-solid fa-download"></i>
-                            <span>CV</span>
-                        </motion.a>
+
+                        <div className='relative inline-block'>
+                            <AnimatePresence>
+                                {isCvHovered && (
+                                    <motion.div
+                                        initial={{ opacity: 0, scale: 0.5, y: 10 }}
+                                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                                        exit={{ opacity: 0, scale: 0.5, y: 5 }}
+                                        transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                                        className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 z-10 whitespace-nowrap pointer-events-none"
+                                    >
+                                        {/* Box stile fumetto */}
+                                        <div className="bg-white text-black font-extrabold text-xs px-3 py-1.5 rounded-2xl border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
+                                            *se non l’hai già visto qui trovi la versione noiosa di tutto lo sbatti che ho fatto <br /> per arrivare fin qui e, spoiler, non è ancora finita
+                                        </div>
+                                        {/* Freccetta del fumetto */}
+                                        <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-black mx-auto -mt-[1px]" />
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+                            {/* Bottone Scarica Portfolio */}
+                            <motion.a
+                                href="/portfolio.pdf" // 👈 Sostituisci "tuo-portfolio.pdf" con il nome esatto del file nella cartella public
+                                download="Portfolio_Sara_Molino.pdf" // Nome che avrà il file scaricato
+                                className="flex items-center gap-2 border border-black text-black px-3 py-1 rounded-full text-xs font-medium transition-colors duration-200"
+                                whileHover={{ y: -2, scale: 1.03 }}
+                                onMouseEnter={() => setIsCvHovered(true)}
+                                onMouseLeave={() => setIsCvHovered(false)}
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                <i className="fa-solid fa-download"></i>
+                                <span>CV</span>
+                            </motion.a>
+                        </div>
 
                         {/* Container del badge di Instagram + Fumetto */}
                         <div className="relative inline-block">
@@ -95,8 +119,8 @@ const Footer = () => {
                                         className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 z-10 whitespace-nowrap pointer-events-none"
                                     >
                                         {/* Box stile fumetto */}
-                                        <div className="bg-yellow-300 text-black font-extrabold text-xs px-3 py-1.5 rounded-2xl border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
-                                            se ti avanza un follow clicca qui!
+                                        <div className="bg-white text-black font-extrabold text-xs px-3 py-1.5 rounded-2xl border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
+                                            *se ti avanza un follow clicca qui!
                                         </div>
                                         {/* Freccetta del fumetto */}
                                         <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-black mx-auto -mt-[1px]" />
