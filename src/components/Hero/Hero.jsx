@@ -84,7 +84,7 @@ const Hero = () => {
                         transition={{ duration: 1, ease: "backOut" }}
                         className='flex Aktiv-Grotesk-Thin text-center p-4'>
 
-                    <p className="text-2xl md:text-2xl">*faccio cose belle per evitare di dovermi trovare un lavoro noioso</p>
+                    <p className="text-xl md:text-2xl">*faccio cose belle per evitare di dovermi trovare un lavoro noioso</p>
                 </motion.div>
             </div>
 
