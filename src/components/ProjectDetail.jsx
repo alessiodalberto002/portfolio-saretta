@@ -79,6 +79,16 @@ const ProjectDetail = () => {
                     </div>
                 </div>
             </div>
+            {/* <div className="flex container justify-between align-items-center">
+                <div className="flex align-items-center">
+                    <i class="fa-solid fa-caret-left text-lg md:text-xl mr-2"></i>
+                    <p className="Aktiv-Grotesk-RegularItalic text-lg md:text-xl m-0 p-0">{project.workback}</p>
+                </div>
+                <div className="flex align-items-center">
+                    <p className="Aktiv-Grotesk-RegularItalic text-lg md:text-xl m-0 p-0">{project.worknext}</p>
+                    <i class="fa-solid fa-caret-right text-lg md:text-xl ml-2"></i>
+                </div>
+            </div> */}
         </div>
     );
 };
