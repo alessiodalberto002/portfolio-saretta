@@ -26,8 +26,14 @@ const Footer = () => {
                             transition: "all 0.3s ease",
                             cursor: 'pointer'
                         }}
-                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseEnter={() => {
+                            // Attiva lo stato solo se il dispositivo ha un vero mouse (desktop)
+                            if (window.matchMedia('(hover: hover)').matches) {
+                                setIsHovered(true);
+                            }
+                        }}
                         onMouseLeave={() => setIsHovered(false)}
+                        onTouchStart={() => setIsHovered(false)} // Resetta subito l'effetto al tocco su mobile
                     >
                         {/* Testo */}
                         <span style={{
