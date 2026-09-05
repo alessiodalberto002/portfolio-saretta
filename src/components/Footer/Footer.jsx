@@ -132,9 +132,18 @@ const Footer = () => {
                                 className="text-black no-underline block"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                onMouseEnter={() => setIsInstaHovered(true)}
+                                onMouseEnter={() => {
+                                    if (window.matchMedia('(hover: hover)').matches) {
+                                        setIsInstaHovered(true);
+                                    }
+                                }}
                                 onMouseLeave={() => setIsInstaHovered(false)}
-                                whileHover={{ y: -5, rotate: 5 }}
+                                onTouchStart={() => setIsInstaHovered(false)}
+                                whileHover={
+                                    typeof window !== "undefined" && window.matchMedia('(hover: hover)').matches
+                                        ? { y: -5, rotate: 5 }
+                                        : {}
+                                }
                                 whileTap={{ scale: 0.9 }}
                             >
                                 <i className="fa-brands fa-instagram"></i>

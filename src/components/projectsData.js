@@ -1,4 +1,3 @@
-// Aggiungi "export" davanti alla costante
 import copScalo from "../assets/img/scalo/14_luglio_copertina.jpg"
 import copAmami from "../assets/img/amami/02.png"
 import copScopriamoci from "../assets/img/scopriamoci/copertina.png"
@@ -55,7 +54,9 @@ export const projectsData = [
             imgScalo4,
         ],
         workback: "Apri e godi",
+        workbackId: 4,
         worknext: "Fai un salto dietro le quinte",
+        worknextId: 2,
     },
     {
         id: 2,
@@ -66,7 +67,7 @@ export const projectsData = [
         description2: "E no, non è il tempo che ci metti a trovare parcheggio nelle vie del centro, ma la durata di Amami Teatro. Un flusso ininterrotto in cui il Teatro Marrucino di Chieti si trasforma in un organismo vivo fatto di corpi, voci, silenzi e gente che non sta ferma un secondo.",
         description3: "Come lo racconti un caos così intenso senza farlo sembrare la solita roba ingessata? Semplice: muovendoti alla stessa folle velocità del festival.",
         description4: "Ogni contenuto era un buco tra la folla per spiare il festival tra teaser per far salire l’hype, backstage per farti vedere tutto quello che col cavolo che vedi se te ne stai seduto in platea e trend per farti capire che Amami Teatro non è un posto per vecchie signore con la pelliccia.",
-        description5: "Risultato? Un feed schizofrenico e bellissimo. Palco, pubblico e artisti si sfiorano, si incrociano e si fondono finché non si capisce più chi recita e chi guarda. Un racconto che ti tira dentro, minuto dopo minuto, e distrugge la distanza tra te e lo spettacolo.",
+        description5: "Risultato? Un feed schizofrenico e bellissimo. Palco, pubblico e artisti si sfiorano, si incrociano e si fondenisfino finché non si capisce più chi recita e chi guarda. Un racconto che ti tira dentro, minuto dopo minuto, e distrugge la distanza tra te e lo spettacolo.",
         interazioni: "+157.000 PERSONE RAGGIUNTE",
         tags: [
             "art direction",
@@ -84,7 +85,11 @@ export const projectsData = [
             imgAmami2,
             imgAmami5,
             imgAmami3,
-        ]
+        ],
+        workback: "Warning: alto tasso di conversione",
+        workbackId: 1,
+        worknext: "Storytime di come ho salvato questo feed",
+        worknextId: 3,
     },
     {
         id: 3,
@@ -111,6 +116,10 @@ export const projectsData = [
             img7p4,
             img7p5,
         ],
+        workback: "Fai un salto dietro le quinte",
+        workbackId: 2,
+        worknext: "Apri e godi",
+        worknextId: 4,
     },
     {
         id: 4,
@@ -133,6 +142,10 @@ export const projectsData = [
             scopriamoci3,
             scopriamoci4,
             scopriamoci5,
-        ]
+        ],
+        workback: "Storytime di come ho salvato questo feed",
+        workbackId: 3,
+        worknext: "Warning: alto tasso di conversione",
+        worknextId: 1,
     },
 ];

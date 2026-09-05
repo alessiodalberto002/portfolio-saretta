@@ -46,37 +46,44 @@ const Navbar = ({ links }) => {
                         alignItems: 'center',
                         justifyContent: 'center',
                         position: 'relative',
-                        width: '200px', // Regola in base alla larghezza della tua scritta/firma
+                        width: '200px',
                         height: '50px',
                         color: isOpen ? "white" : "black",
                         fontSize: "25px",
                         transition: "all 0.3s ease",
                         cursor: 'pointer'
                     }}
-                    onMouseEnter={() => !isOpen && setIsHovered(true)}
+                    onMouseEnter={() => {
+                        // Attiva lo stato solo se il dispositivo supporta un vero mouse
+                        const supportsHover = window.matchMedia('(hover: hover)').matches;
+                        if (!isOpen && supportsHover) {
+                            setIsHovered(true);
+                        }
+                    }}
                     onMouseLeave={() => setIsHovered(false)}
+                    onTouchStart={() => setIsHovered(false)} // Garantisce che il touch disattivi subito l'hover
                 >
                     {/* Testo */}
-                    <span style={{ 
-                        opacity: isHovered ? 0 : 1, 
-                        transition: 'opacity 0.2s ease' 
+                    <span style={{
+                        opacity: isHovered ? 0 : 1,
+                        transition: 'opacity 0.2s ease'
                     }}>
                         sara molino
                     </span>
 
                     {/* Immagine */}
-                    <img 
+                    <img
                         src={firma}
-                        alt="Firma" 
-                        style={{ 
+                        alt="Firma"
+                        style={{
                             position: 'absolute',
                             opacity: isHovered ? 1 : 0,
-                            width: '100%', 
+                            width: '100%',
                             height: 'auto',
                             pointerEvents: 'none',
                             transition: 'opacity 0.2s ease',
                             objectFit: 'contain'
-                        }} 
+                        }}
                     />
                 </a>
 
