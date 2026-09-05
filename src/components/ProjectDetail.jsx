@@ -102,15 +102,18 @@ const ProjectDetail = () => {
                                 </motion.span>
                             ))}
                         </motion.div>
-
-                        <motion.div variants={itemVariants} className="flex justify-between align-items-center my-12">
+                        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 my-12">
                             {project.workbackId ? (
                                 <MotionLink
                                     to={`/project/${project.workbackId}`}
-                                    className="flex align-items-center border bg-black px-4 py-2 text-decoration-none text-white"
-                                    whileHover={{ y: -5, rotate: 5 }}
+                                    className="w-full sm:w-auto flex justify-center items-center border bg-black px-4 py-2 text-decoration-none text-white"
+                                    whileHover={
+                                        typeof window !== "undefined" && window.matchMedia('(hover: hover)').matches
+                                            ? { y: -5, rotate: 5 }
+                                            : {}
+                                    }
                                 >
-                                    <i className="fa-solid fa-caret-left text-white text-lg md:text-xl mr-2"></i>
+                                    <i className="fa-solid fa-caret-left text-lg md:text-xl mr-2"></i>
                                     <p className="Aktiv-Grotesk-RegularItalic text-lg md:text-xl m-0 p-0">{project.workback}</p>
                                 </MotionLink>
                             ) : <div />}
@@ -118,14 +121,18 @@ const ProjectDetail = () => {
                             {project.worknextId ? (
                                 <MotionLink
                                     to={`/project/${project.worknextId}`}
-                                    className="flex align-items-center border bg-black px-4 py-2 text-decoration-none text-white"
-                                    whileHover={{ y: -5, rotate: -5 }}
+                                    className="w-full sm:w-auto flex justify-center items-center border bg-black px-4 py-2 text-decoration-none text-white"
+                                    whileHover={
+                                        typeof window !== "undefined" && window.matchMedia('(hover: hover)').matches
+                                            ? { y: -5, rotate: 5 }
+                                            : {}
+                                    }
                                 >
                                     <p className="Aktiv-Grotesk-RegularItalic text-lg md:text-xl m-0 p-0">{project.worknext}</p>
-                                    <i className="fa-solid fa-caret-right text-white text-lg md:text-xl ml-2"></i>
+                                    <i className="fa-solid fa-caret-right text-lg md:text-xl ml-2"></i>
                                 </MotionLink>
                             ) : <div />}
-                        </motion.div>
+                        </div>
                     </div>
                 </div>
             </div>
